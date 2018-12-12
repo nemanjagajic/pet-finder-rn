@@ -10,19 +10,35 @@ import {setLoggedUser} from '../../store/auth/actions';
 
 class Auth extends Component {
     state = {
-        selectedOption: 'login'
+        selectedOption: 'login',
+        username: '',
+        password: '',
+        rePassword: ''
+    };
+
+    handleLogin = () => {
+        console.log(this.state)
     };
 
     render() {
         // Login form
         const loginForm = (
             <View style={styles.authForm}>
-                <InputField placeholder='Username' backgroundColor='#f2f2f2'/>
-                <InputField placeholder='Password' backgroundColor='#f2f2f2' secureTextEntry={true}/>
+                <InputField
+                    placeholder='Username'
+                    backgroundColor='#f2f2f2'
+                    onChangeText={text => this.setState({username: text})}
+                />
+                <InputField
+                    placeholder='Password'
+                    backgroundColor='#f2f2f2'
+                    secureTextEntry={true}
+                    onChangeText={text => this.setState({password: text})}
+                />
                 <ButtonCustom
                     color={'#009688'}
                     width={100}
-                    onPress={() => this.props.setLoggedUser('Nemanja')}
+                    onPress={this.handleLogin}
                 >
                     Log in
                 </ButtonCustom>
@@ -32,9 +48,23 @@ class Auth extends Component {
         // Register form
         const registerForm = (
             <View style={styles.authForm}>
-                <InputField placeholder='Username' backgroundColor='#f2f2f2'/>
-                <InputField placeholder='Password' backgroundColor='#f2f2f2' secureTextEntry={true}/>
-                <InputField placeholder='Repeat password' backgroundColor='#f2f2f2' secureTextEntry={true}/>
+                <InputField
+                    placeholder='Username'
+                    backgroundColor='#f2f2f2'
+                    onChangeText={text => this.setState({username: text})}
+                />
+                <InputField
+                    placeholder='Password'
+                    backgroundColor='#f2f2f2'
+                    secureTextEntry={true}
+                    onChangeText={text => this.setState({password: text})}
+                />
+                <InputField
+                    placeholder='Repeat password'
+                    backgroundColor='#f2f2f2'
+                    secureTextEntry={true}
+                    onChangeText={text => this.setState({rePassword: text})}
+                />
                 <ButtonCustom color={'#009688'} width={100}>Register</ButtonCustom>
             </View>
         );
