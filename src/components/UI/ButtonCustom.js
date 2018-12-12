@@ -3,7 +3,7 @@ import {TouchableOpacity, Text, StyleSheet, View} from 'react-native';
 
 const ButtonCustom = props => {
     return (
-        <TouchableOpacity {...props} style={{width: props.width, height: props.height, opacity: props.opacity}}>
+        <TouchableOpacity {...props} style={{width: props.width, height: props.height}}>
             <View style={[styles.button, {backgroundColor: props.color}]}>
                 <Text style={styles.text}>{props.children}</Text>
             </View>
