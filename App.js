@@ -1,21 +1,11 @@
 import React, {Component} from "react";
 import {Provider} from 'react-redux';
-import {createSwitchNavigator, createAppContainer} from "react-navigation";
+import {createAppContainer} from "react-navigation";
 
 import store from './src/store/index';
+import RootNavigation from "./src/navigation";
 
-import Auth from './src/screens/auth/Auth';
-
-const RootNavigator = createSwitchNavigator(
-    {
-        Auth: Auth
-    },
-    {
-        initialRoute: Auth
-    }
-);
-
-const AppNavigation = createAppContainer(RootNavigator);
+const AppNavigation = createAppContainer(RootNavigation);
 
 class App extends Component {
     render() {

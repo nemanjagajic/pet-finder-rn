@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, ImageBackground, KeyboardAvoidingView, Text} from 'react-native';
+import {View, StyleSheet, ImageBackground, KeyboardAvoidingView} from 'react-native';
 import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 
 import backgroundImage from '../../../assets/dog-background.jpg';
 import Header from "../../components/UI/Header";
@@ -17,7 +18,10 @@ class Auth extends Component {
     };
 
     handleLogin = () => {
-        console.log(this.state)
+        this.props.setLoggedUser({
+            username: this.state.username
+        });
+        this.props.navigation.navigate('Explore');
     };
 
     render() {
@@ -150,8 +154,12 @@ const mapStateToProps = state => ({
     auth: state.auth
 });
 
-const mapDispatchToProps = dispatch => ({
-    setLoggedUser: user => dispatch(setLoggedUser(user))
-});
+const mapDispatchToProps = dispatch =>
+    bindActionCreators(
+        {
+            setLoggedUser
+        },
+        dispatch
+    );
 
 export default connect(mapStateToProps, mapDispatchToProps)(Auth);
