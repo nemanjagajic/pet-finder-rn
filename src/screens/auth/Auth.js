@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, ImageBackground, KeyboardAvoidingView} from 'react-native';
+import {View, StyleSheet, ImageBackground, KeyboardAvoidingView, Text} from 'react-native';
 import {connect} from 'react-redux';
 
 import backgroundImage from '../../../assets/dog-background.jpg';
@@ -80,6 +80,7 @@ class Auth extends Component {
                             <ButtonCustom
                                 color={'#4d4d4d'}
                                 onPress={() => this.setState({selectedOption: 'register'})}
+                                icon='md-person'
                             >
                                 Register
                             </ButtonCustom>
@@ -88,6 +89,7 @@ class Auth extends Component {
                             <ButtonCustom
                                 color={'#4d4d4d'}
                                 onPress={() => console.log(this.props.auth)}
+                                icon='md-finger-print'
                             >
                                 Guest
                             </ButtonCustom>
@@ -99,6 +101,7 @@ class Auth extends Component {
                             color={'#4d4d4d'}
                             width={'100%'}
                             onPress={() => this.setState({selectedOption: 'login'})}
+                            icon='md-log-in'
                         >
                             Login
                         </ButtonCustom>
@@ -137,17 +140,18 @@ const styles = StyleSheet.create({
     buttonWrapper: {
         width: '47%'
     },
+    buttonLayout: {},
     mainButtonWrapper: {
         width: '100%'
     }
 });
 
 const mapStateToProps = state => ({
-   auth: state.auth
+    auth: state.auth
 });
 
 const mapDispatchToProps = dispatch => ({
-   setLoggedUser: user => dispatch(setLoggedUser(user))
+    setLoggedUser: user => dispatch(setLoggedUser(user))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Auth);
