@@ -75,7 +75,7 @@ class Auth extends Component {
 
         return (
             <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
-                <KeyboardAvoidingView style={styles.container} behavior="padding">
+                <KeyboardAvoidingView style={styles.container} behavior='padding'>
                     <Header color={'#f2f2f2'} fontSize={28}>Welcome to Pet Finder</Header>
 
                     <View style={styles.buttonContainer}>

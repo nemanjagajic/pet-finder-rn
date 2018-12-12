@@ -1,16 +1,22 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, TextInput, ScrollView} from 'react-native';
+import {View, StyleSheet, TextInput, ScrollView, KeyboardAvoidingView} from 'react-native';
 import ButtonCustom from "../../components/UI/ButtonCustom";
 import {MapView} from 'expo';
+import { Marker } from 'react-native-maps';
 import {Ionicons} from '@expo/vector-icons';
 
-import FloatingButton from "../../components/UI/FloatingButton";
 import BottomButton from "../../components/UI/BottomButton";
 
 
 class AddPet extends Component {
     state = {
-        showMap: false
+        showMap: false,
+        focusedLocation: {
+            latitude: 45.2524671,
+            longitude: 19.8378565,
+            latitudeDelta: 0.015,
+            longitudeDelta: 0.0121
+        }
     };
 
     componentDidMount() {
@@ -21,38 +27,90 @@ class AddPet extends Component {
         }, 250);
     }
 
+    handlePickLocation = event => {
+        const coords = event.nativeEvent.coordinate;
+        this.map.animateToRegion({
+            ...this.state.focusedLocation,
+            latitude: coords.latitude,
+            longitude: coords.longitude
+        });
+
+        this.setState(prevState => ({
+            focusedLocation: {
+                ...prevState.focusedLocation,
+                latitude: coords.latitude,
+                longitude: coords.longitude
+            }
+        }));
+    };
+
+    handleGetLocation = () => {
+        navigator.geolocation.getCurrentPosition(pos => {
+            const coordsEvent = {
+                nativeEvent: {
+                    coordinate: {
+                        latitude: pos.coords.latitude,
+                        longitude: pos.coords.longitude
+                    }
+                }
+            };
+
+            this.handlePickLocation(coordsEvent);
+        }, (error) => {
+            console.log(error);
+            alert('Error occurred fetching location');
+        });
+    };
+
     render() {
         const map = (
             <MapView
                 style={styles.map}
-                initialRegion={{
-                    latitude: 37.78825,
-                    longitude: -122.4324,
-                    latitudeDelta: 0.015,
-                    longitudeDelta: 0.0121
-                }}
-            />
+                initialRegion={this.state.focusedLocation}
+                ref={(ref) => this.map = ref}
+                onPress={this.handlePickLocation}
+            >
+                <Marker
+                    coordinate={this.state.focusedLocation}
+                />
+            </MapView>
         );
 
         return (
-            <View style={styles.container}>
+            <KeyboardAvoidingView style={styles.container} behavior='padding'>
                 <ScrollView style={{width: '100%'}}>
                     <View style={styles.row}>
                         <View style={styles.centeredContent}>
                             {this.state.showMap ? map : <View style={styles.mapPlaceHolder}/>}
-                            <ButtonCustom color={'#808080'} width={'100%'} height={50}>Locate me</ButtonCustom>
+                            <ButtonCustom
+                                color={'#808080'}
+                                width={'100%'}
+                                height={50}
+                                onPress={this.handleGetLocation}
+                            >
+                                Locate me
+                            </ButtonCustom>
+
                             <View style={styles.imagePlaceholder}>
                                 <Ionicons name={'md-images'} color={'white'} size={50}/>
                             </View>
-                            <ButtonCustom color={'#808080'} width={'100%'} height={50}>Add image</ButtonCustom>
+                            <ButtonCustom
+                                color={'#808080'}
+                                width={'100%'}
+                                height={50}
+                            >
+                                Add image
+                            </ButtonCustom>
+
                             <TextInput multiline={true} style={styles.description} placeholder='Description'/>
+
                             <View style={styles.buttonWrapper}>
                                 <BottomButton color={'#009688'} icon={'md-checkmark'}/>
                             </View>
                         </View>
                     </View>
                 </ScrollView>
-            </View>
+            </KeyboardAvoidingView>
         );
     }
 }
