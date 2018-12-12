@@ -17,7 +17,7 @@ const ExploreNavigation = createStackNavigator(
         AddPet: {
             screen: AddPet,
             navigationOptions: {
-                title: 'Add Pet',
+                title: 'Add found pet',
                 headerStyle: {
                     backgroundColor: '#009688'
                 },
