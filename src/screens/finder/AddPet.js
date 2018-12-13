@@ -38,6 +38,14 @@ class AddPet extends Component {
         }));
     };
 
+    handleImageAdded = image => {
+        this.setState({image})
+    };
+
+    openCamera = () => {
+        this.props.navigation.navigate('Camera');
+    };
+
     render() {
         return (
             <KeyboardAvoidingView style={styles.container} behavior='padding'>
@@ -62,10 +70,17 @@ class AddPet extends Component {
                                         </ButtonCustom>
                                     </View>
                             }
-                            <AddImage/>
+                            <AddImage
+                                onImageAdded={this.handleImageAdded}
+                                onOpenCamera={this.openCamera}
+                            />
                             <TextInput multiline={true} style={styles.description} placeholder='Description'/>
                             <View style={styles.buttonWrapper}>
-                                <BottomButton color={'#009688'} icon={'md-checkmark'}/>
+                                <BottomButton
+                                    color={'#009688'}
+                                    icon={'md-checkmark'}
+                                    onPress={() => console.log(this.state)}
+                                />
                             </View>
                         </View>
                     </View>
