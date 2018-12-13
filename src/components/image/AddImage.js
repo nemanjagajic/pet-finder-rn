@@ -3,7 +3,6 @@ import {View, StyleSheet, Image} from "react-native";
 import {Ionicons} from '@expo/vector-icons';
 import ButtonCustom from "../UI/ButtonCustom";
 import {ImagePicker, Permissions} from 'expo';
-import {IMAGE_HEIGHT, IMAGE_WIDTH} from "./constants";
 
 class AddImage extends Component {
     state = {
@@ -19,7 +18,7 @@ class AddImage extends Component {
     pickImage = async () => {
         let result = await ImagePicker.launchImageLibraryAsync({
             allowsEditing: true,
-            aspect: [3, 4]
+            aspect: [3, 2]
         });
 
         if (!result.cancelled) {
@@ -80,17 +79,17 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#ccc',
         borderRadius: 10,
-        width: IMAGE_WIDTH + 2,
-        height: IMAGE_HEIGHT + 2,
+        width: '100%',
+        height: 180,
         marginBottom: 5,
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 20
     },
     image: {
-        width: IMAGE_WIDTH,
-        height: IMAGE_HEIGHT,
-        borderRadius: 10
+        width: '100%',
+        borderRadius: 10,
+        height: 178
     },
     buttonWrapper: {
         flexDirection: 'row',
