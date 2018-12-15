@@ -5,7 +5,7 @@ import PetItem from "./Item";
 const PetList = (props) => {
     return (
         <FlatList
-            style={styles.container}
+            contentContainerStyle={styles.container}
             data={props.pets}
             renderItem={pet => <PetItem {...pet.item} />}
             keyExtractor={pet => pet.description.toString()}
@@ -16,8 +16,9 @@ const PetList = (props) => {
 const styles = StyleSheet.create({
    container: {
        width: '100%',
-       marginTop: 20,
-       marginBottom: 20
+       paddingTop: 15,
+       paddingBottom: 15,
+       alignItems: 'center'
    }
 });
 

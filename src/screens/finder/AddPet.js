@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, TextInput, ScrollView, KeyboardAvoidingView} from 'react-native';
+import {View, StyleSheet, TextInput, ScrollView, KeyboardAvoidingView, Platform} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import {connect} from 'react-redux';
+import {Location} from 'expo';
 
 import BottomButton from "../../components/UI/BottomButton";
 import PickLocation from "../../components/map/PickLocation";
@@ -19,6 +20,11 @@ class AddPet extends Component {
             longitude: 19.8378565,
             latitudeDelta: 0.015,
             longitudeDelta: 0.0121
+        },
+        locationInfo: {
+            street: 'Ulica Jevrejska',
+            name: Platform.OS === 'android' ? '38' : 'Ulica Jevrejska 36-42',
+            country: 'Serbia'
         },
         image: null,
         description: ''
@@ -40,7 +46,17 @@ class AddPet extends Component {
                 longitude: coords.longitude
             }
         }));
+
+        this.setLocationInformation(coords);
     };
+
+    async setLocationInformation(coords) {
+        const {latitude, longitude} = coords;
+        let locationInfo = await Location.reverseGeocodeAsync({latitude, longitude});
+
+        console.log(locationInfo);
+        this.setState({locationInfo: locationInfo[0]})
+    }
 
     handleImageAdded = image => {
         this.setState({image})
@@ -51,10 +67,11 @@ class AddPet extends Component {
     };
 
     addPet = () => {
-        const {focusedLocation, image, description} = this.state;
+        const {focusedLocation, locationInfo, image, description} = this.state;
 
         const pet = {
             location: focusedLocation,
+            locationInfo,
             image,
             description
         };
@@ -134,7 +151,8 @@ const styles = StyleSheet.create({
         padding: 10,
         marginTop: 20,
         marginBottom: 20,
-        width: '100%'
+        width: '100%',
+        color: '#808080'
     },
     mapPlaceHolder: {
         width: '100%',

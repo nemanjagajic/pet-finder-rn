@@ -12,9 +12,7 @@ class Explore extends Component {
                 {
                     this.props.pets.items.length > 0
                         ?
-                        <View style={styles.row}>
-                            <PetList pets={this.props.pets.items}/>
-                        </View>
+                        <PetList pets={this.props.pets.items}/>
                         :
                         <View style={styles.containerCenter}>
                             <Ionicons name={'md-paw'} color={'#bfbfbf'} size={40}/>
@@ -44,9 +42,6 @@ const styles = StyleSheet.create({
     emptyListText: {
         color: '#b3b3b3'
     },
-    row: {
-        width: '90%'
-    }
 });
 
 const mapStateToProps = state => ({
