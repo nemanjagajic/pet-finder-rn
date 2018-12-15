@@ -1,0 +1,1 @@
+export const ADD_FOUND_PET = 'ADD_FOUND_PET';

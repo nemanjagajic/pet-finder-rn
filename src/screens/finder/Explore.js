@@ -3,15 +3,24 @@ import {connect} from 'react-redux';
 import {View, StyleSheet, Text} from 'react-native';
 import FloatingButton from "../../components/UI/FloatingButton";
 import {Ionicons} from '@expo/vector-icons';
+import PetList from "../../components/pet/List";
 
 class Explore extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <View style={styles.containerCenter}>
-                    <Ionicons name={'md-paw'} color={'#bfbfbf'} size={40}/>
-                    <Text style={styles.emptyListText}>No pets added yet</Text>
-                </View>
+                {
+                    this.props.pets.items.length > 0
+                        ?
+                        <View style={styles.row}>
+                            <PetList pets={this.props.pets.items}/>
+                        </View>
+                        :
+                        <View style={styles.containerCenter}>
+                            <Ionicons name={'md-paw'} color={'#bfbfbf'} size={40}/>
+                            <Text style={styles.emptyListText}>No pets added yet</Text>
+                        </View>
+                }
                 <FloatingButton
                     onPress={() => this.props.navigation.navigate('AddPet')}
                     color={'#009688'}
@@ -34,11 +43,15 @@ const styles = StyleSheet.create({
     },
     emptyListText: {
         color: '#b3b3b3'
+    },
+    row: {
+        width: '90%'
     }
 });
 
 const mapStateToProps = state => ({
-    auth: state.auth
+    auth: state.auth,
+    pets: state.pets
 });
 
 export default connect(mapStateToProps)(Explore);

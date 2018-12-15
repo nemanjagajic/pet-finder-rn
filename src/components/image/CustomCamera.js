@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {View, StyleSheet} from 'react-native';
 import {Camera} from 'expo';
-import ButtonCustom from "../UI/ButtonCustom";
 import FloatingButton from "../UI/FloatingButton";
 
 class CustomCamera extends Component {
@@ -9,10 +8,21 @@ class CustomCamera extends Component {
         type: Camera.Constants.Type.back,
     };
 
+    takePicture = async () => {
+        if (this.camera) {
+            let photo = await this.camera.takePictureAsync();
+            console.log(photo);
+        }
+    };
+
     render() {
         return (
             <View style={styles.container}>
-                <Camera style={styles.camera} type={this.state.type}>
+                <Camera
+                    style={styles.camera}
+                    type={this.state.type}
+                    ref={ref => { this.camera = ref; }}
+                >
                     <View
                         style={{
                             flex: 1,
@@ -22,7 +32,11 @@ class CustomCamera extends Component {
                     </View>
                 </Camera>
                 <View style={styles.options}>
-                    <FloatingButton color={'#009688'} icon='md-camera'/>
+                    <FloatingButton
+                        color={'#009688'}
+                        icon='md-camera'
+                        onPress={this.takePicture}
+                    />
                 </View>
             </View>
         );

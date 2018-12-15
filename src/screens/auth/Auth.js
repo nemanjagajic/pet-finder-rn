@@ -92,7 +92,6 @@ class Auth extends Component {
                         <View style={[styles.buttonWrapper, {opacity: 0.5}]}>
                             <ButtonCustom
                                 color={'#4d4d4d'}
-                                onPress={() => console.log(this.props.auth)}
                                 icon='md-finger-print'
                             >
                                 Guest

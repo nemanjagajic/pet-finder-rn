@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
 import {View, StyleSheet, TextInput, ScrollView, KeyboardAvoidingView} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
+import {connect} from 'react-redux';
 
 import BottomButton from "../../components/UI/BottomButton";
 import PickLocation from "../../components/map/PickLocation";
 import AddImage from "../../components/image/AddImage";
 import ButtonCustom from "../../components/UI/ButtonCustom";
+import {bindActionCreators} from "redux";
+import {addFoundPet} from "../../store/pet/actions";
 
 
 class AddPet extends Component {
@@ -17,7 +20,8 @@ class AddPet extends Component {
             latitudeDelta: 0.015,
             longitudeDelta: 0.0121
         },
-        image: null
+        image: null,
+        description: ''
     };
 
     componentDidMount() {
@@ -44,6 +48,18 @@ class AddPet extends Component {
 
     openCamera = () => {
         this.props.navigation.navigate('Camera');
+    };
+
+    addPet = () => {
+        const {focusedLocation, image, description} = this.state;
+
+        const pet = {
+            location: focusedLocation,
+            image,
+            description
+        };
+
+        this.props.addFoundPet(pet);
     };
 
     render() {
@@ -74,12 +90,17 @@ class AddPet extends Component {
                                 onImageAdded={this.handleImageAdded}
                                 onOpenCamera={this.openCamera}
                             />
-                            <TextInput multiline={true} style={styles.description} placeholder='Description'/>
+                            <TextInput
+                                multiline={true}
+                                style={styles.description}
+                                placeholder='Description'
+                                onChangeText={text => this.setState({description: text})}
+                            />
                             <View style={styles.buttonWrapper}>
                                 <BottomButton
                                     color={'#009688'}
                                     icon={'md-checkmark'}
-                                    onPress={() => console.log(this.state)}
+                                    onPress={this.addPet}
                                 />
                             </View>
                         </View>
@@ -132,4 +153,12 @@ const styles = StyleSheet.create({
     }
 });
 
-export default AddPet;
+const mapDispatchToProps = dispatch =>
+    bindActionCreators(
+        {
+            addFoundPet
+        },
+        dispatch
+    );
+
+export default connect(null, mapDispatchToProps)(AddPet);
