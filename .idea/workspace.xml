@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1904bfd5-aa80-4dcb-9ce7-a1680bde6f9f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/screens/finder/FoundPet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/navigation/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/navigation/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/navigation/reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pet/Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pet/Item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/image/AddImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/image/AddImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/image/CustomCamera.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/image/CustomCamera.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/map/PickLocation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/map/PickLocation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/navigation/explore/ExploreNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/explore/ExploreNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/finder/AddPet.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/finder/AddFoundPet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/auth/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/auth/Auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/finder/AddFoundPet.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/finder/AddFoundPet.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/finder/Explore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/finder/Explore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers-index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,22 +34,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="110" />
+          <entry key="js" value="115" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="110" />
+          <entry key="JavaScript" value="115" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="19998" />
+          <entry key="js" value="20004" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="19998" />
+          <entry key="JavaScript" value="20004" />
         </counts>
       </usages-collector>
     </session>
@@ -61,10 +59,46 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/screens/finder/Explore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+            <state relative-caret-position="450">
+              <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/screens/auth/Auth.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="71" column="45" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/image/CustomCamera.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="36" column="40" lean-forward="true" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/navigation/explore/ExploreNavigation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="42" column="30" lean-forward="true" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,8 +119,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/screens/finder/AddFoundPet.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="189" column="23" selection-start-line="189" selection-start-column="23" selection-end-line="189" selection-end-column="23" />
+            <state relative-caret-position="398">
+              <caret line="192" column="29" selection-start-line="192" selection-start-column="29" selection-end-line="192" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/image/AddImage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="52" column="46" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -99,6 +145,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
               <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/map/PickLocation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="499">
+              <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -129,7 +187,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Ionicons</find>
       <find>Text</find>
       <find>Permission</find>
       <find>Camera</find>
@@ -159,6 +216,7 @@
       <find>props</find>
       <find>this.this</find>
       <find>pickedAd</find>
+      <find>009688</find>
     </findStrings>
     <replaceStrings>
       <replace>this.props</replace>
@@ -182,26 +240,26 @@
         <option value="$PROJECT_DIR$/src/navigation/index.js" />
         <option value="$PROJECT_DIR$/src/components/UI/FloatingButton.js" />
         <option value="$PROJECT_DIR$/src/components/UI/BottomButton.js" />
-        <option value="$PROJECT_DIR$/src/components/map/PickLocation.js" />
         <option value="$PROJECT_DIR$/src/components/image/Camera.js" />
         <option value="$PROJECT_DIR$/src/components/image/constants.js" />
-        <option value="$PROJECT_DIR$/src/components/image/CustomCamera.js" />
         <option value="$PROJECT_DIR$/src/store/pet/constants.js" />
         <option value="$PROJECT_DIR$/src/store/pet/actions.js" />
         <option value="$PROJECT_DIR$/src/store/pet/reducer.js" />
         <option value="$PROJECT_DIR$/src/components/image/stagod.js" />
-        <option value="$PROJECT_DIR$/src/screens/auth/Auth.js" />
-        <option value="$PROJECT_DIR$/src/components/image/AddImage.js" />
         <option value="$PROJECT_DIR$/src/screens/finder/AddPet.js" />
-        <option value="$PROJECT_DIR$/src/navigation/explore/ExploreNavigation.js" />
         <option value="$PROJECT_DIR$/src/components/pet/List.js" />
         <option value="$PROJECT_DIR$/src/store/navigation/constants.js" />
         <option value="$PROJECT_DIR$/src/store/reducers-index.js" />
-        <option value="$PROJECT_DIR$/src/screens/finder/Explore.js" />
         <option value="$PROJECT_DIR$/src/store/navigation/actions.js" />
         <option value="$PROJECT_DIR$/src/store/navigation/reducer.js" />
         <option value="$PROJECT_DIR$/src/screens/finder/FoundPet.js" />
         <option value="$PROJECT_DIR$/src/components/pet/Item.js" />
+        <option value="$PROJECT_DIR$/src/components/map/PickLocation.js" />
+        <option value="$PROJECT_DIR$/src/components/image/AddImage.js" />
+        <option value="$PROJECT_DIR$/src/screens/finder/Explore.js" />
+        <option value="$PROJECT_DIR$/src/navigation/explore/ExploreNavigation.js" />
+        <option value="$PROJECT_DIR$/src/screens/auth/Auth.js" />
+        <option value="$PROJECT_DIR$/src/components/image/CustomCamera.js" />
         <option value="$PROJECT_DIR$/src/screens/finder/AddFoundPet.js" />
       </list>
     </option>
@@ -263,6 +321,20 @@
               <item name="pet-finder" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pet-finder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pet-finder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="map" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pet-finder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pet-finder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="pet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -289,27 +361,14 @@
               <item name="pet-finder" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pet-finder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pet-finder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="screens" type="462c0819:PsiDirectoryNode" />
               <item name="finder" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pet-finder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pet-finder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pet-finder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pet-finder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="navigation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pet-finder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pet-finder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="pet" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -354,12 +413,12 @@
       <workItem from="1544692628175" duration="17000" />
       <workItem from="1544879552127" duration="21000" />
       <workItem from="1544879578195" duration="13760000" />
-      <workItem from="1544982851838" duration="12719000" />
+      <workItem from="1544982851838" duration="13460000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72439000" />
+    <option name="totallyTimeSpent" value="73180000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -369,6 +428,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -436,16 +496,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/image/constants.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/image/CustomCamera.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/pet/constants.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -467,38 +517,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/map/PickLocation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/image/stagod.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/auth/Auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/image/AddImage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -518,16 +538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/navigation/explore/ExploreNavigation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="39" lean-forward="true" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -586,26 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/finder/FoundPet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/finder/Explore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pet/Item.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -616,10 +606,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/finder/FoundPet.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/map/PickLocation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/image/AddImage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="52" column="46" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/finder/Explore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/navigation/explore/ExploreNavigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="42" column="30" lean-forward="true" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/auth/Auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="71" column="45" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/image/CustomCamera.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="36" column="40" lean-forward="true" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/screens/finder/AddFoundPet.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="189" column="23" selection-start-line="189" selection-start-column="23" selection-end-line="189" selection-end-column="23" />
+        <state relative-caret-position="398">
+          <caret line="192" column="29" selection-start-line="192" selection-start-column="29" selection-end-line="192" selection-end-column="29" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

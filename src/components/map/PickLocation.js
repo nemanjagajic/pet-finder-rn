@@ -49,7 +49,7 @@ class PickLocation extends Component {
                     />
                 </MapView>
                 <ButtonCustom
-                    color={'#808080'}
+                    color={'#26A69A'}
                     width={'100%'}
                     height={50}
                     onPress={this.handleGetLocation}

@@ -47,7 +47,7 @@ class AddImage extends Component {
                 </View>
                 <View style={styles.buttonWrapper}>
                     <ButtonCustom
-                        color={'#808080'}
+                        color={'#26A69A'}
                         width={'48%'}
                         height={50}
                         onPress={this.pickImage}
@@ -55,7 +55,7 @@ class AddImage extends Component {
                         Add image
                     </ButtonCustom>
                     <ButtonCustom
-                        color={'#808080'}
+                        color={'#26A69A'}
                         width={'48%'}
                         height={50}
                         onPress={this.openCamera}

@@ -129,7 +129,7 @@ class AddFoundPet extends Component {
                             />
                             <View style={styles.buttonWrapper}>
                                 <BottomButton
-                                    color={'#009688'}
+                                    color={'#26A69A'}
                                     icon={'md-checkmark'}
                                     onPress={this.addPet}
                                 />
@@ -187,12 +187,12 @@ const styles = StyleSheet.create({
         width: '100%',
         padding: 5,
         paddingLeft: 10,
-        color: '#808080',
+        color: '#fff',
         borderWidth: 1,
         borderRadius: 10,
-        borderColor: '#ccc',
+        borderColor: '#a6a6a6',
         marginTop: 5,
-        backgroundColor: '#d9d9d9'
+        backgroundColor: '#b3b3b3'
     }
 });
 
