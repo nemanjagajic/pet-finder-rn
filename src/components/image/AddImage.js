@@ -6,8 +6,7 @@ import {ImagePicker, Permissions} from 'expo';
 
 class AddImage extends Component {
     state = {
-        image: null,
-        takingPicture: false
+        image: null
     };
 
     async componentDidMount() {

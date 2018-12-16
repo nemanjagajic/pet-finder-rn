@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, TextInput, ScrollView, KeyboardAvoidingView, Platform, Text} from 'react-native';
+import {View, StyleSheet, TextInput, ScrollView, KeyboardAvoidingView,
+    Platform, Text, ToastAndroid, AlertIOS} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import {connect} from 'react-redux';
 import {Location} from 'expo';
@@ -55,11 +56,11 @@ class AddPet extends Component {
         const {latitude, longitude} = coords;
         let locationInfo = await Location.reverseGeocodeAsync({latitude, longitude});
 
-        this.setState({locationInfo: locationInfo[0]})
+        this.setState({locationInfo: locationInfo[0]});
     }
 
     handleImageAdded = image => {
-        this.setState({image})
+        this.setState({image});
     };
 
     openCamera = () => {
@@ -69,6 +70,15 @@ class AddPet extends Component {
     addPet = () => {
         const {focusedLocation, locationInfo, image, description} = this.state;
 
+        if (description === '') {
+            if (Platform.OS === 'android') {
+                ToastAndroid.show('Description cannot be empty', ToastAndroid.SHORT);
+            } else {
+                AlertIOS.alert('Empty description', 'Description cannot be empty');
+            }
+            return;
+        }
+
         const pet = {
             location: focusedLocation,
             locationInfo,
@@ -77,6 +87,7 @@ class AddPet extends Component {
         };
 
         this.props.addFoundPet(pet);
+        this.props.navigation.pop();
     };
 
     render() {

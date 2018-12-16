@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1904bfd5-aa80-4dcb-9ce7-a1680bde6f9f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pet/Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pet/Item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/image/AddImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/image/AddImage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/finder/AddPet.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/finder/AddPet.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -29,22 +29,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="79" />
+          <entry key="js" value="81" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="79" />
+          <entry key="JavaScript" value="81" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="17676" />
+          <entry key="js" value="18095" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="17676" />
+          <entry key="JavaScript" value="18095" />
         </counts>
       </usages-collector>
     </session>
@@ -90,8 +90,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/screens/finder/AddPet.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="593">
-              <caret line="194" column="57" selection-start-line="194" selection-start-column="57" selection-end-line="194" selection-end-column="57" />
+            <state relative-caret-position="506">
+              <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -102,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/image/AddImage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="77" column="35" lean-forward="true" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="35" />
+            <state relative-caret-position="120">
+              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -158,6 +158,12 @@
       <find>locate me</find>
       <find>handleLocationPicked</find>
       <find>setState</find>
+      <find>handleLogin</find>
+      <find>handleIma</find>
+      <find>ImagePicker</find>
+      <find>takingPicture</find>
+      <find>handleImage</find>
+      <find>this.props.navi</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -182,9 +188,7 @@
         <option value="$PROJECT_DIR$/src/components/image/Camera.js" />
         <option value="$PROJECT_DIR$/src/components/image/constants.js" />
         <option value="$PROJECT_DIR$/src/navigation/explore/ExploreNavigation.js" />
-        <option value="$PROJECT_DIR$/src/components/image/AddImage.js" />
         <option value="$PROJECT_DIR$/src/components/image/CustomCamera.js" />
-        <option value="$PROJECT_DIR$/src/screens/auth/Auth.js" />
         <option value="$PROJECT_DIR$/src/store/pet/constants.js" />
         <option value="$PROJECT_DIR$/src/store/pet/actions.js" />
         <option value="$PROJECT_DIR$/src/store/reducers-index.js" />
@@ -192,6 +196,9 @@
         <option value="$PROJECT_DIR$/src/screens/finder/Explore.js" />
         <option value="$PROJECT_DIR$/src/components/pet/List.js" />
         <option value="$PROJECT_DIR$/src/components/pet/Item.js" />
+        <option value="$PROJECT_DIR$/src/components/image/stagod.js" />
+        <option value="$PROJECT_DIR$/src/screens/auth/Auth.js" />
+        <option value="$PROJECT_DIR$/src/components/image/AddImage.js" />
         <option value="$PROJECT_DIR$/src/screens/finder/AddPet.js" />
       </list>
     </option>
@@ -280,6 +287,13 @@
               <item name="pet-finder" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pet-finder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pet-finder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="screens" type="462c0819:PsiDirectoryNode" />
               <item name="finder" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -331,12 +345,12 @@
       <workItem from="1544692628175" duration="17000" />
       <workItem from="1544879552127" duration="21000" />
       <workItem from="1544879578195" duration="13760000" />
-      <workItem from="1544982851838" duration="4742000" />
+      <workItem from="1544982851838" duration="6641000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64462000" />
+    <option name="totallyTimeSpent" value="66361000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -475,13 +489,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/auth/Auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="156" column="23" lean-forward="true" selection-start-line="156" selection-start-column="23" selection-end-line="156" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/pet/actions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -533,16 +540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/image/AddImage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="77" column="35" lean-forward="true" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pet/Item.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
@@ -553,10 +550,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/image/stagod.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/auth/Auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/image/AddImage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/screens/finder/AddPet.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="194" column="57" selection-start-line="194" selection-start-column="57" selection-end-line="194" selection-end-column="57" />
+        <state relative-caret-position="506">
+          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
