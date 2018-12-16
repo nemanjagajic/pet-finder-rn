@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, TextInput, ScrollView, KeyboardAvoidingView, Platform} from 'react-native';
+import {View, StyleSheet, TextInput, ScrollView, KeyboardAvoidingView, Platform, Text} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import {connect} from 'react-redux';
 import {Location} from 'expo';
@@ -24,7 +24,8 @@ class AddPet extends Component {
         locationInfo: {
             street: 'Ulica Jevrejska',
             name: Platform.OS === 'android' ? '38' : 'Ulica Jevrejska 36-42',
-            country: 'Serbia'
+            country: 'Serbia',
+            city: 'Novi Sad'
         },
         image: null,
         description: ''
@@ -54,7 +55,6 @@ class AddPet extends Component {
         const {latitude, longitude} = coords;
         let locationInfo = await Location.reverseGeocodeAsync({latitude, longitude});
 
-        console.log(locationInfo);
         this.setState({locationInfo: locationInfo[0]})
     }
 
@@ -103,6 +103,9 @@ class AddPet extends Component {
                                         </ButtonCustom>
                                     </View>
                             }
+                            <Text style={styles.pickedAddress}>
+                                {`${Platform.OS === 'android' ? this.state.locationInfo.street : ''} ${this.state.locationInfo.name}, ${this.state.locationInfo.city}, ${this.state.locationInfo.country}`}
+                            </Text>
                             <AddImage
                                 onImageAdded={this.handleImageAdded}
                                 onOpenCamera={this.openCamera}
@@ -152,7 +155,7 @@ const styles = StyleSheet.create({
         marginTop: 20,
         marginBottom: 20,
         width: '100%',
-        color: '#808080'
+        color: '#737373'
     },
     mapPlaceHolder: {
         width: '100%',
@@ -168,6 +171,16 @@ const styles = StyleSheet.create({
         width: '100%',
         alignItems: 'center',
         marginBottom: 20
+    },
+    pickedAddress: {
+        width: '100%',
+        padding: 5,
+        paddingLeft: 10,
+        color: '#999999',
+        borderWidth: 1,
+        borderRadius: 10,
+        borderColor: '#ccc',
+        marginTop: 5,
     }
 });
 

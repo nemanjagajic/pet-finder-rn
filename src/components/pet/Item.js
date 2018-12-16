@@ -18,10 +18,18 @@ const PetItem = (props) => {
                 <Text style={styles.description}>{props.description}</Text>
             </View>
             <View style={styles.location}>
-                <Ionicons name='ios-navigate' size={20} color={'#009688'}/>
-                <Text style={styles.locationText}>
-                    {`${Platform.OS === 'android' ? props.locationInfo.street : ''} ${props.locationInfo.name}, ${props.locationInfo.country}`}
+                <View style={styles.locationItem}>
+                    <Ionicons name='ios-navigate' size={18} color={'#26A69A'}/>
+                    <Text style={styles.locationStreetText}>
+                        {`${Platform.OS === 'android' ? props.locationInfo.street : ''} ${props.locationInfo.name}`}
                     </Text>
+                </View>
+                <View style={styles.locationItem}>
+                    <Ionicons name='md-map' size={18} color={'#26A69A'}/>
+                    <Text style={styles.locationCityText}>
+                        {`${props.locationInfo.city}, ${props.locationInfo.country}`}
+                    </Text>
+                </View>
             </View>
         </View>
     );
@@ -51,7 +59,9 @@ const styles = StyleSheet.create({
     image: {
         width: 120,
         height: '85%',
-        borderRadius: 10
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: '#d9d9d9'
     },
     imagePlaceholder: {
         width: 120,
@@ -69,16 +79,27 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     location: {
-        width: '100%',
+        flex: 1,
         height: '15%',
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
+        paddingBottom: 2,
     },
-    locationText: {
+    locationStreetText: {
         color: '#8c8c8c',
         marginLeft: 5,
         fontSize: 12
+    },
+    locationCityText: {
+        color: '#8c8c8c',
+        marginLeft: 5,
+        marginRight: 10,
+        fontSize: 12
+    },
+    locationItem: {
+        flexDirection: 'row',
+        alignItems: 'center'
     }
 });
 
