@@ -106,7 +106,7 @@ class AddFoundPet extends Component {
                                     <View>
                                         <View style={styles.mapPlaceHolder}/>
                                         <ButtonCustom
-                                            color={'#26A69A'}
+                                            color={'#808080'}
                                             width={'100%'}
                                             height={50}
                                         >
@@ -131,7 +131,7 @@ class AddFoundPet extends Component {
                             />
                             <View style={styles.buttonWrapper}>
                                 <BottomButton
-                                    color={'#26A69A'}
+                                    color={'#009688'}
                                     icon={'md-checkmark'}
                                     onPress={this.addPet}
                                 />

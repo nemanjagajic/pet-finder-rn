@@ -11,7 +11,7 @@ const ExploreNavigation = createStackNavigator(
             navigationOptions: {
                 title: 'Explore',
                 headerStyle: {
-                    backgroundColor: '#26A69A'
+                    backgroundColor: '#009688'
                 },
                 headerTintColor: '#fff'
             }
@@ -21,7 +21,7 @@ const ExploreNavigation = createStackNavigator(
             navigationOptions: {
                 title: 'Add found pet',
                 headerStyle: {
-                    backgroundColor: '#26A69A'
+                    backgroundColor: '#009688'
                 },
                 headerTintColor: '#fff'
             }
@@ -31,7 +31,7 @@ const ExploreNavigation = createStackNavigator(
             navigationOptions: {
                 title: 'Camera',
                 headerStyle: {
-                    backgroundColor: '#26A69A'
+                    backgroundColor: '#009688'
                 },
                 headerTintColor: '#fff'
             }
@@ -41,7 +41,7 @@ const ExploreNavigation = createStackNavigator(
             navigationOptions: {
                 title: 'Found pet',
                 headerStyle: {
-                    backgroundColor: '#26A69A'
+                    backgroundColor: '#009688'
                 },
                 headerTintColor: '#fff'
             }

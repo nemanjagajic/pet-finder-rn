@@ -33,7 +33,7 @@ class CustomCamera extends Component {
                 </Camera>
                 <View style={styles.options}>
                     <FloatingButton
-                        color={'#26A69A'}
+                        color={'#009688'}
                         icon='md-camera'
                         onPress={this.takePicture}
                     />

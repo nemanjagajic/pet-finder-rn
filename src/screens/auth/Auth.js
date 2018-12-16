@@ -40,7 +40,7 @@ class Auth extends Component {
                     onChangeText={text => this.setState({password: text})}
                 />
                 <ButtonCustom
-                    color={'#26A69A'}
+                    color={'#009688'}
                     width={100}
                     onPress={this.handleLogin}
                 >
@@ -69,7 +69,7 @@ class Auth extends Component {
                     secureTextEntry={true}
                     onChangeText={text => this.setState({rePassword: text})}
                 />
-                <ButtonCustom color={'#26A69A'} width={100}>Register</ButtonCustom>
+                <ButtonCustom color={'#009688'} width={100}>Register</ButtonCustom>
             </View>
         );
 

@@ -28,7 +28,7 @@ class Explore extends Component {
                 }
                 <FloatingButton
                     onPress={() => this.props.navigation.navigate('AddPet')}
-                    color={'#26A69A'}
+                    color={'#009688'}
                     icon={'md-add'}/>
             </View>
         );
