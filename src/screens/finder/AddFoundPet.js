@@ -4,16 +4,16 @@ import {View, StyleSheet, TextInput, ScrollView, KeyboardAvoidingView,
 import {Ionicons} from '@expo/vector-icons';
 import {connect} from 'react-redux';
 import {Location} from 'expo';
+import {bindActionCreators} from "redux";
 
 import BottomButton from "../../components/UI/BottomButton";
 import PickLocation from "../../components/map/PickLocation";
 import AddImage from "../../components/image/AddImage";
 import ButtonCustom from "../../components/UI/ButtonCustom";
-import {bindActionCreators} from "redux";
 import {addFoundPet} from "../../store/pet/actions";
 
 
-class AddPet extends Component {
+class AddFoundPet extends Component {
     state = {
         showMap: false,
         focusedLocation: {
@@ -187,11 +187,12 @@ const styles = StyleSheet.create({
         width: '100%',
         padding: 5,
         paddingLeft: 10,
-        color: '#999999',
+        color: '#808080',
         borderWidth: 1,
         borderRadius: 10,
         borderColor: '#ccc',
         marginTop: 5,
+        backgroundColor: '#d9d9d9'
     }
 });
 
@@ -203,4 +204,4 @@ const mapDispatchToProps = dispatch =>
         dispatch
     );
 
-export default connect(null, mapDispatchToProps)(AddPet);
+export default connect(null, mapDispatchToProps)(AddFoundPet);
