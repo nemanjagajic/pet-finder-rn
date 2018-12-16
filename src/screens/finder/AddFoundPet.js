@@ -106,7 +106,7 @@ class AddFoundPet extends Component {
                                     <View>
                                         <View style={styles.mapPlaceHolder}/>
                                         <ButtonCustom
-                                            color={'#808080'}
+                                            color={'#26A69A'}
                                             width={'100%'}
                                             height={50}
                                         >
@@ -114,9 +114,11 @@ class AddFoundPet extends Component {
                                         </ButtonCustom>
                                     </View>
                             }
-                            <Text style={styles.pickedAddress}>
-                                {`${Platform.OS === 'android' ? this.state.locationInfo.street : ''} ${this.state.locationInfo.name}, ${this.state.locationInfo.city}, ${this.state.locationInfo.country}`}
-                            </Text>
+                            <View style={styles.pickedAddress}>
+                                <Text style={{color: '#fff'}}>
+                                    {`${Platform.OS === 'android' ? this.state.locationInfo.street : ''} ${this.state.locationInfo.name}, ${this.state.locationInfo.city}, ${this.state.locationInfo.country}`}
+                                </Text>
+                            </View>
                             <AddImage
                                 onImageAdded={this.handleImageAdded}
                                 onOpenCamera={this.openCamera}
