@@ -83,7 +83,8 @@ class AddFoundPet extends Component {
             location: focusedLocation,
             locationInfo,
             image,
-            description
+            description,
+            date: new Date()
         };
 
         this.props.addFoundPet(pet);

@@ -16,21 +16,22 @@ const PetItem = props => {
             <View style={styles.container}>
                 <View style={styles.infoAndImgContainer}>
                     <View style={styles.location}>
-                        <View style={styles.locationItem}>
+                        <View style={styles.infoItem}>
                             <Ionicons name='ios-navigate' size={18} color={'#26A69A'}/>
                             <Text style={styles.infoText}>
                                 {`${Platform.OS === 'android' ? props.locationInfo.street + ' ' + props.locationInfo.name : props.locationInfo.name}`}
                             </Text>
                         </View>
-                        <View style={styles.locationItem}>
+                        <View style={styles.infoItem}>
                             <Ionicons name='md-map' size={18} color={'#26A69A'}/>
                             <Text style={[styles.infoText, {marginLeft: 6}]}>
                                 {`${props.locationInfo.city}, ${props.locationInfo.country}`}
                             </Text>
                         </View>
-                        <View style={styles.locationItem}>
+                        <View style={styles.infoItem}>
                             <Ionicons name='ios-time' size={18} color={'#26A69A'}/>
-                            <Text style={styles.infoText}>10.12.2018 14:30
+                            <Text style={styles.infoText}>
+                                {`${props.date.getDate()}.${props.date.getMonth() + 1}.${props.date.getFullYear()} ${props.date.getHours()}:${props.date.getMinutes()}`}
                             </Text>
                         </View>
                     </View>
@@ -107,9 +108,10 @@ const styles = StyleSheet.create({
         marginLeft: 5,
         fontSize: 12
     },
-    locationItem: {
+    infoItem: {
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginBottom: 1
     }
 });
 
