@@ -14,7 +14,26 @@ const PetItem = props => {
             })}
         >
             <View style={styles.container}>
-                <View style={styles.imgAndDescWrapper}>
+                <View style={styles.infoAndImgContainer}>
+                    <View style={styles.location}>
+                        <View style={styles.locationItem}>
+                            <Ionicons name='ios-navigate' size={18} color={'#26A69A'}/>
+                            <Text style={styles.infoText}>
+                                {`${Platform.OS === 'android' ? props.locationInfo.street + ' ' + props.locationInfo.name : props.locationInfo.name}`}
+                            </Text>
+                        </View>
+                        <View style={styles.locationItem}>
+                            <Ionicons name='md-map' size={18} color={'#26A69A'}/>
+                            <Text style={[styles.infoText, {marginLeft: 6}]}>
+                                {`${props.locationInfo.city}, ${props.locationInfo.country}`}
+                            </Text>
+                        </View>
+                        <View style={styles.locationItem}>
+                            <Ionicons name='ios-time' size={18} color={'#26A69A'}/>
+                            <Text style={styles.infoText}>10.12.2018 14:30
+                            </Text>
+                        </View>
+                    </View>
                     {
                         props.image
                             ?
@@ -24,22 +43,11 @@ const PetItem = props => {
                                 <Ionicons name='md-images' color={'white'} size={40}/>
                             </View>
                     }
-                    <Text style={styles.description}>{props.description}</Text>
                 </View>
-                <View style={styles.location}>
-                    <View style={styles.locationItem}>
-                        <Ionicons name='ios-navigate' size={18} color={'#26A69A'}/>
-                        <Text style={styles.locationStreetText}>
-                            {`${Platform.OS === 'android' ? props.locationInfo.street : ''} ${props.locationInfo.name}`}
-                        </Text>
-                    </View>
-                    <View style={styles.locationItem}>
-                        <Ionicons name='md-map' size={18} color={'#26A69A'}/>
-                        <Text style={styles.locationCityText}>
-                            {`${props.locationInfo.city}, ${props.locationInfo.country}`}
-                        </Text>
-                    </View>
-                </View>
+                <Text style={styles.description}>
+                    {props.description.slice(0, 45)}
+                    {props.description.length > 45 ? '...' : ''}
+                </Text>
             </View>
         </TouchableWithoutFeedback>
     );
@@ -58,9 +66,9 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         paddingLeft: 10,
         paddingTop: 1,
-        marginBottom: 10
+        marginBottom: 10,
     },
-    imgAndDescWrapper: {
+    infoAndImgContainer: {
         flexDirection: 'row',
         width: '100%',
         height: 100,
@@ -71,7 +79,8 @@ const styles = StyleSheet.create({
         height: '85%',
         borderRadius: 10,
         borderWidth: 1,
-        borderColor: '#d9d9d9'
+        borderColor: '#d9d9d9',
+        marginRight: 10
     },
     imagePlaceholder: {
         width: 120,
@@ -79,32 +88,23 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         backgroundColor: '#d9d9d9',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginRight: 10
     },
     description: {
-        marginLeft: 10,
-        marginRight: 10,
-        height: '85%',
         color: '#8c8c8c',
-        flex: 1,
+        flex: 1
     },
     location: {
         flex: 1,
-        height: '15%',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
+        height: '85%',
+        flexDirection: 'column',
         paddingBottom: 2,
+        marginTop: 5,
     },
-    locationStreetText: {
+    infoText: {
         color: '#8c8c8c',
         marginLeft: 5,
-        fontSize: 12
-    },
-    locationCityText: {
-        color: '#8c8c8c',
-        marginLeft: 5,
-        marginRight: 10,
         fontSize: 12
     },
     locationItem: {
