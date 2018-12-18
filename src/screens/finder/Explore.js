@@ -6,11 +6,11 @@ import {bindActionCreators} from "redux";
 
 import FloatingButton from "../../components/UI/FloatingButton";
 import PetList from "../../components/pet/List";
-import {setNavigation} from "../../store/navigation/actions";
+import {setExploreNavigator} from '../../services/Navigation';
 
 class Explore extends Component {
     componentDidMount() {
-        this.props.setNavigation(this.props.navigation);
+        setExploreNavigator(this.props.navigation);
     }
 
     render() {
@@ -51,17 +51,9 @@ const styles = StyleSheet.create({
     },
 });
 
-const mapDispatchToProps = dispatch =>
-    bindActionCreators(
-        {
-            setNavigation
-        },
-        dispatch
-    );
-
 const mapStateToProps = state => ({
     auth: state.auth,
     pets: state.pets
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Explore);
+export default connect(mapStateToProps)(Explore);

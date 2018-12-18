@@ -2,7 +2,7 @@ import React from 'react';
 import {FlatList, StyleSheet} from 'react-native';
 import PetItem from "./Item";
 
-const PetList = (props) => {
+const PetList = props => {
     return (
         <FlatList
             contentContainerStyle={styles.container}

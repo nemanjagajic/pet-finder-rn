@@ -1,50 +1,49 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React from 'react';
 import {View, Text, StyleSheet, Image, Platform, TouchableWithoutFeedback} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 
-class PetItem extends Component {
-    render() {
-        return (
-            <TouchableWithoutFeedback
-                onPress={() => this.props.navigation.navigation.navigate('FoundPet', {
-                    image: this.props.image,
-                    location: this.props.locationInfo,
-                    description: this.props.description
-                })}
-            >
-                <View style={styles.container}>
-                    <View style={styles.imgAndDescWrapper}>
-                        {
-                            this.props.image
-                                ?
-                                <Image source={{uri: this.props.image}} style={styles.image}/>
-                                :
-                                <View style={styles.imagePlaceholder}>
-                                    <Ionicons name='md-images' color={'white'} size={40}/>
-                                </View>
-                        }
-                        <Text style={styles.description}>{this.props.description}</Text>
+import {exploreNavigate} from '../../services/Navigation';
+
+const PetItem = props => {
+    return (
+        <TouchableWithoutFeedback
+            onPress={() => exploreNavigate('FoundPet', {
+                image: props.image,
+                location: props.locationInfo,
+                description: props.description
+            })}
+        >
+            <View style={styles.container}>
+                <View style={styles.imgAndDescWrapper}>
+                    {
+                        props.image
+                            ?
+                            <Image source={{uri: props.image}} style={styles.image}/>
+                            :
+                            <View style={styles.imagePlaceholder}>
+                                <Ionicons name='md-images' color={'white'} size={40}/>
+                            </View>
+                    }
+                    <Text style={styles.description}>{props.description}</Text>
+                </View>
+                <View style={styles.location}>
+                    <View style={styles.locationItem}>
+                        <Ionicons name='ios-navigate' size={18} color={'#26A69A'}/>
+                        <Text style={styles.locationStreetText}>
+                            {`${Platform.OS === 'android' ? props.locationInfo.street : ''} ${props.locationInfo.name}`}
+                        </Text>
                     </View>
-                    <View style={styles.location}>
-                        <View style={styles.locationItem}>
-                            <Ionicons name='ios-navigate' size={18} color={'#26A69A'}/>
-                            <Text style={styles.locationStreetText}>
-                                {`${Platform.OS === 'android' ? this.props.locationInfo.street : ''} ${this.props.locationInfo.name}`}
-                            </Text>
-                        </View>
-                        <View style={styles.locationItem}>
-                            <Ionicons name='md-map' size={18} color={'#26A69A'}/>
-                            <Text style={styles.locationCityText}>
-                                {`${this.props.locationInfo.city}, ${this.props.locationInfo.country}`}
-                            </Text>
-                        </View>
+                    <View style={styles.locationItem}>
+                        <Ionicons name='md-map' size={18} color={'#26A69A'}/>
+                        <Text style={styles.locationCityText}>
+                            {`${props.locationInfo.city}, ${props.locationInfo.country}`}
+                        </Text>
                     </View>
                 </View>
-            </TouchableWithoutFeedback>
-        );
-    }
-}
+            </View>
+        </TouchableWithoutFeedback>
+    );
+};
 
 const styles = StyleSheet.create({
     container: {
@@ -114,8 +113,4 @@ const styles = StyleSheet.create({
     }
 });
 
-const mapStateToProps = state => ({
-   navigation: state.navigation
-});
-
-export default connect(mapStateToProps)(PetItem);
+export default PetItem;
