@@ -9,13 +9,15 @@ const PetItem = props => {
         <TouchableWithoutFeedback
             onPress={() => exploreNavigate('FoundPet', {
                 image: props.image,
-                location: props.locationInfo,
-                description: props.description
+                location: props.location,
+                locationInfo: props.locationInfo,
+                description: props.description,
+                date: props.date
             })}
         >
             <View style={styles.container}>
                 <View style={styles.infoAndImgContainer}>
-                    <View style={styles.location}>
+                    <View style={styles.info}>
                         <View style={styles.infoItem}>
                             <Ionicons name='ios-navigate' size={18} color={'#26A69A'}/>
                             <Text style={styles.infoText}>
@@ -34,6 +36,12 @@ const PetItem = props => {
                                 {`${props.date.getDate()}.${props.date.getMonth() + 1}.${props.date.getFullYear()} ${props.date.getHours()}:${props.date.getMinutes()}`}
                             </Text>
                         </View>
+                        <View style={styles.infoItem}>
+                            <Ionicons name='md-contact' size={18} color={'#26A69A'}/>
+                            <Text style={[styles.infoText, {marginLeft: 6}]}>
+                                nemanjagajic
+                            </Text>
+                        </View>
                     </View>
                     {
                         props.image
@@ -46,8 +54,8 @@ const PetItem = props => {
                     }
                 </View>
                 <Text style={styles.description}>
-                    {props.description.slice(0, 45)}
-                    {props.description.length > 45 ? '...' : ''}
+                    {props.description.slice(0, 42)}
+                    {props.description.length > 42 ? '...' : ''}
                 </Text>
             </View>
         </TouchableWithoutFeedback>
@@ -96,7 +104,7 @@ const styles = StyleSheet.create({
         color: '#8c8c8c',
         flex: 1
     },
-    location: {
+    info: {
         flex: 1,
         height: '85%',
         flexDirection: 'column',
@@ -104,7 +112,7 @@ const styles = StyleSheet.create({
         marginTop: 5,
     },
     infoText: {
-        color: '#8c8c8c',
+        color: '#999999',
         marginLeft: 5,
         fontSize: 12
     },

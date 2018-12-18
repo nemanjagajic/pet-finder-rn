@@ -11,7 +11,6 @@ class CustomCamera extends Component {
     takePicture = async () => {
         if (this.camera) {
             let photo = await this.camera.takePictureAsync();
-            console.log(photo);
         }
     };
 

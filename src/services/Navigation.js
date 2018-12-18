@@ -6,7 +6,6 @@ export const setExploreNavigator = navigationRef => exploreNavigator = navigatio
 
 export const exploreNavigate = (routeName, params) => {
     if (exploreNavigator && routeName) {
-        console.log('here2');
         exploreNavigator.dispatch(
             NavigationActions.navigate({
                 routeName,

@@ -116,7 +116,8 @@ class AddFoundPet extends Component {
                                     </View>
                             }
                             <View style={styles.pickedAddress}>
-                                <Text style={{color: '#fff'}}>
+                                <Ionicons name='md-locate' size={18} color={'#26A69A'}/>
+                                <Text style={{color: '#8c8c8c', marginLeft: 5}}>
                                     {`${Platform.OS === 'android' ? this.state.locationInfo.street : ''} ${this.state.locationInfo.name}, ${this.state.locationInfo.city}, ${this.state.locationInfo.country}`}
                                 </Text>
                             </View>
@@ -193,9 +194,11 @@ const styles = StyleSheet.create({
         color: '#fff',
         borderWidth: 1,
         borderRadius: 10,
-        borderColor: '#a6a6a6',
+        borderColor: '#ccc',
         marginTop: 5,
-        backgroundColor: '#b3b3b3'
+        flexDirection: 'row',
+        backgroundColor: '#e6e6e6',
+        alignItems: 'center'
     }
 });
 
