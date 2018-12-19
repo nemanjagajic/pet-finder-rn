@@ -36,12 +36,6 @@ const PetItem = props => {
                                 {`${props.date.getDate()}.${props.date.getMonth() + 1}.${props.date.getFullYear()} ${props.date.getHours()}:${props.date.getMinutes()}`}
                             </Text>
                         </View>
-                        <View style={styles.infoItem}>
-                            <Ionicons name='md-contact' size={18} color={'#26A69A'}/>
-                            <Text style={[styles.infoText, {marginLeft: 6}]}>
-                                nemanjagajic
-                            </Text>
-                        </View>
                     </View>
                     {
                         props.image
