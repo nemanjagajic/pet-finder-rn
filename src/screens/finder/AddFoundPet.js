@@ -63,10 +63,6 @@ class AddFoundPet extends Component {
         this.setState({image});
     };
 
-    openCamera = () => {
-        this.props.navigation.navigate('Camera');
-    };
-
     addPet = () => {
         const {focusedLocation, locationInfo, image, description} = this.state;
 
@@ -123,7 +119,6 @@ class AddFoundPet extends Component {
                             </View>
                             <AddImage
                                 onImageAdded={this.handleImageAdded}
-                                onOpenCamera={this.openCamera}
                             />
                             <TextInput
                                 multiline={true}

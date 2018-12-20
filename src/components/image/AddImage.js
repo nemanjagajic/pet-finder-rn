@@ -27,8 +27,17 @@ class AddImage extends Component {
         this.props.onImageAdded(this.state.image);
     };
 
-    openCamera = () => {
-        this.props.onOpenCamera();
+    openCamera = async () => {
+        let result = await ImagePicker.launchCameraAsync({
+            allowsEditing: true,
+            aspect: [3, 2]
+        });
+
+        if (!result.cancelled) {
+            this.setState({image: result.uri});
+        }
+
+        this.props.onImageAdded(this.state.image);
     };
 
     render() {
