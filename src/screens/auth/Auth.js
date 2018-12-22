@@ -7,7 +7,7 @@ import backgroundImage from '../../../assets/dog-background.jpg';
 import Header from "../../components/UI/Header";
 import ButtonCustom from "../../components/UI/ButtonCustom";
 import InputField from "../../components/UI/InputField";
-import {setLoggedUser} from '../../store/auth/actions';
+import {setLoggedUser, logIn} from '../../store/auth/actions';
 
 class Auth extends Component {
     state = {
@@ -18,10 +18,18 @@ class Auth extends Component {
     };
 
     handleLogin = () => {
-        this.props.setLoggedUser({
-            username: this.state.username
+        // this.props.setLoggedUser({
+        //     username: this.state.username
+        // });
+        // this.props.navigation.navigate('Explore');
+        const {username, password} = this.state;
+        this.props.logIn({
+            username,
+            password
         });
-        this.props.navigation.navigate('Explore');
+    };
+
+    handleRegister = () => {
     };
 
     render() {
@@ -31,11 +39,13 @@ class Auth extends Component {
                 <InputField
                     placeholder='Username'
                     backgroundColor='#f2f2f2'
+                    autoCapitalize = 'none'
                     onChangeText={text => this.setState({username: text})}
                 />
                 <InputField
                     placeholder='Password'
                     backgroundColor='#f2f2f2'
+                    autoCapitalize = 'none'
                     secureTextEntry={true}
                     onChangeText={text => this.setState({password: text})}
                 />
@@ -55,21 +65,30 @@ class Auth extends Component {
                 <InputField
                     placeholder='Username'
                     backgroundColor='#f2f2f2'
+                    autoCapitalize = 'none'
                     onChangeText={text => this.setState({username: text})}
                 />
                 <InputField
                     placeholder='Password'
                     backgroundColor='#f2f2f2'
+                    autoCapitalize = 'none'
                     secureTextEntry={true}
                     onChangeText={text => this.setState({password: text})}
                 />
                 <InputField
                     placeholder='Repeat password'
                     backgroundColor='#f2f2f2'
+                    autoCapitalize = 'none'
                     secureTextEntry={true}
                     onChangeText={text => this.setState({rePassword: text})}
                 />
-                <ButtonCustom color={'#009688'} width={100}>Register</ButtonCustom>
+                <ButtonCustom
+                    color={'#009688'}
+                    width={100}
+                    onPress={this.handleRegister}
+                >
+                    Register
+                </ButtonCustom>
             </View>
         );
 
@@ -156,7 +175,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch =>
     bindActionCreators(
         {
-            setLoggedUser
+            setLoggedUser,
+            logIn
         },
         dispatch
     );
