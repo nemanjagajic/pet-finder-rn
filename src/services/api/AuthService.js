@@ -1,10 +1,13 @@
 import axios from 'axios';
+import {BASE} from "./constants";
+
+const LOGIN = `${BASE}/api/users/login`;
 
 class AuthService {
     startLogin = user => {
         const {username, password} = user;
 
-        return axios.post('http://localhost:8000/api/users/login', {
+        return axios.post(LOGIN, {
             username,
             password
         });
