@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, ImageBackground, KeyboardAvoidingView} from 'react-native';
+import {View, StyleSheet, ImageBackground, KeyboardAvoidingView, Text} from 'react-native';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
@@ -7,7 +7,7 @@ import backgroundImage from '../../../assets/dog-background.jpg';
 import Header from "../../components/UI/Header";
 import ButtonCustom from "../../components/UI/ButtonCustom";
 import InputField from "../../components/UI/InputField";
-import {setLoggedUser, logIn} from '../../store/auth/actions';
+import {logIn} from '../../store/auth/actions';
 
 class Auth extends Component {
     state = {
@@ -17,11 +17,13 @@ class Auth extends Component {
         rePassword: ''
     };
 
+    componentDidUpdate() {
+        if (this.props.loggedUser && typeof(this.props.loggedUser) !== 'number') {
+            this.props.navigation.navigate('ExploreStack');
+        }
+    }
+
     handleLogin = () => {
-        // this.props.setLoggedUser({
-        //     username: this.state.username
-        // });
-        // this.props.navigation.navigate('Explore');
         const {username, password} = this.state;
         this.props.logIn({
             username,
@@ -38,17 +40,24 @@ class Auth extends Component {
             <View style={styles.authForm}>
                 <InputField
                     placeholder='Username'
-                    backgroundColor='#f2f2f2'
-                    autoCapitalize = 'none'
+                    backgroundColor={this.props.loggedUser !== 404 ? '#f2f2f2' : '#FF9494'}
+                    autoCapitalize='none'
                     onChangeText={text => this.setState({username: text})}
                 />
                 <InputField
                     placeholder='Password'
-                    backgroundColor='#f2f2f2'
-                    autoCapitalize = 'none'
+                    backgroundColor={this.props.loggedUser !== 401 ? '#f2f2f2' : '#FF9494'}
+                    autoCapitalize='none'
                     secureTextEntry={true}
                     onChangeText={text => this.setState({password: text})}
                 />
+                {
+                    this.props.loggedUser === 422
+                        ?
+                        <Text style={styles.message}>Required fields cannot be empty</Text>
+                        :
+                        <Text style={styles.message}/>
+                }
                 <ButtonCustom
                     color={'#009688'}
                     width={100}
@@ -65,27 +74,35 @@ class Auth extends Component {
                 <InputField
                     placeholder='Username'
                     backgroundColor='#f2f2f2'
-                    autoCapitalize = 'none'
+                    autoCapitalize='none'
                     onChangeText={text => this.setState({username: text})}
                 />
                 <InputField
                     placeholder='Password'
                     backgroundColor='#f2f2f2'
-                    autoCapitalize = 'none'
+                    autoCapitalize='none'
                     secureTextEntry={true}
                     onChangeText={text => this.setState({password: text})}
                 />
                 <InputField
                     placeholder='Repeat password'
                     backgroundColor='#f2f2f2'
-                    autoCapitalize = 'none'
+                    autoCapitalize='none'
                     secureTextEntry={true}
                     onChangeText={text => this.setState({rePassword: text})}
                 />
+                {
+                    this.props.loggedUser === 422
+                        ?
+                        <Text style={styles.message}>Required fields cannot be empty</Text>
+                        :
+                        <Text style={styles.message}/>
+                }
                 <ButtonCustom
                     color={'#009688'}
                     width={100}
                     onPress={this.handleRegister}
+
                 >
                     Register
                 </ButtonCustom>
@@ -165,17 +182,22 @@ const styles = StyleSheet.create({
     buttonLayout: {},
     mainButtonWrapper: {
         width: '100%'
+    },
+    message: {
+        height: 25,
+        paddingBottom: 5,
+        color: '#f2f2f2',
+        fontSize: 16
     }
 });
 
 const mapStateToProps = state => ({
-    auth: state.auth
+    loggedUser: state.auth.loggedUser
 });
 
 const mapDispatchToProps = dispatch =>
     bindActionCreators(
         {
-            setLoggedUser,
             logIn
         },
         dispatch
