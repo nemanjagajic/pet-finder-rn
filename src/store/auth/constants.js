@@ -1,2 +1,4 @@
 export const SET_LOGGED_USER = 'SET_LOGGED_USER';
 export const LOG_IN = 'LOG_IN';
+export const REGISTER = 'REGISTER';
+export const SET_REGISTERED_MESSAGE = 'SET_REGISTERED_MESSAGE';

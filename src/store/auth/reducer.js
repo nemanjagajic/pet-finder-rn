@@ -1,15 +1,21 @@
-import {SET_LOGGED_USER} from './constants';
+import {SET_LOGGED_USER, SET_REGISTERED_MESSAGE} from './constants';
 
 const initialState = {
-    loggedUser: null
+    loggedUser: null,
+    registeredMessage: ''
 };
 
 const authReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_LOGGED_USER:
             return {
-                ...initialState,
+                ...state,
                 loggedUser: action.user
+            };
+        case SET_REGISTERED_MESSAGE:
+            return {
+                ...state,
+                registeredMessage: action.message
             };
         default:
             return state;

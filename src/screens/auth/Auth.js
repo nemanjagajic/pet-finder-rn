@@ -7,14 +7,16 @@ import backgroundImage from '../../../assets/dog-background.jpg';
 import Header from "../../components/UI/Header";
 import ButtonCustom from "../../components/UI/ButtonCustom";
 import InputField from "../../components/UI/InputField";
-import {logIn} from '../../store/auth/actions';
+import {logIn, register} from '../../store/auth/actions';
 
 class Auth extends Component {
     state = {
         selectedOption: 'login',
+        fullName: '',
         username: '',
         password: '',
-        rePassword: ''
+        rePassword: '',
+        validRePassword: true,
     };
 
     componentDidUpdate() {
@@ -32,6 +34,22 @@ class Auth extends Component {
     };
 
     handleRegister = () => {
+        const {fullName, username, password, rePassword} = this.state;af
+        this.setState(() => ({validRePassword: true}));
+
+
+        if (password !== rePassword) {
+            this.setState(() => ({validRePassword: false}));
+            return;
+        }
+
+        this.props.register({
+           fullName,
+           username,
+           password
+        });
+
+        this.setState(() => ({password: '', rePassword: ''}));
     };
 
     render() {
@@ -43,6 +61,7 @@ class Auth extends Component {
                     backgroundColor={this.props.loggedUser !== 404 ? '#f2f2f2' : '#FF9494'}
                     autoCapitalize='none'
                     onChangeText={text => this.setState({username: text})}
+                    value={this.state.username}
                 />
                 <InputField
                     placeholder='Password'
@@ -50,6 +69,7 @@ class Auth extends Component {
                     autoCapitalize='none'
                     secureTextEntry={true}
                     onChangeText={text => this.setState({password: text})}
+                    value={this.state.password}
                 />
                 {
                     this.props.loggedUser === 422
@@ -72,10 +92,19 @@ class Auth extends Component {
         const registerForm = (
             <View style={styles.authForm}>
                 <InputField
+                    placeholder='Full name'
+                    backgroundColor='#f2f2f2'
+                    autoCapitalize='none'
+                    onChangeText={text => this.setState({fullName: text})}
+                    value={this.state.fullName}
+                />
+                <InputField
                     placeholder='Username'
                     backgroundColor='#f2f2f2'
                     autoCapitalize='none'
+                    secureTextEntry={false}
                     onChangeText={text => this.setState({username: text})}
+                    value={this.state.username}
                 />
                 <InputField
                     placeholder='Password'
@@ -83,18 +112,20 @@ class Auth extends Component {
                     autoCapitalize='none'
                     secureTextEntry={true}
                     onChangeText={text => this.setState({password: text})}
+                    value={this.state.password}
                 />
                 <InputField
                     placeholder='Repeat password'
-                    backgroundColor='#f2f2f2'
+                    backgroundColor={this.state.validRePassword ? '#f2f2f2' : '#FF9494'}
                     autoCapitalize='none'
                     secureTextEntry={true}
                     onChangeText={text => this.setState({rePassword: text})}
+                    value={this.state.rePassword}
                 />
                 {
-                    this.props.loggedUser === 422
+                    this.props.registeredMessage !== ''
                         ?
-                        <Text style={styles.message}>Required fields cannot be empty</Text>
+                        <Text style={styles.message}>{this.props.registeredMessage}</Text>
                         :
                         <Text style={styles.message}/>
                 }
@@ -192,13 +223,15 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = state => ({
-    loggedUser: state.auth.loggedUser
+    loggedUser: state.auth.loggedUser,
+    registeredMessage: state.auth.registeredMessage
 });
 
 const mapDispatchToProps = dispatch =>
     bindActionCreators(
         {
-            logIn
+            logIn,
+            register
         },
         dispatch
     );
