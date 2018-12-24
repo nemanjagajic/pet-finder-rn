@@ -6,15 +6,19 @@ import {Ionicons} from '@expo/vector-icons';
 import FloatingButton from "../../components/UI/FloatingButton";
 import PetList from "../../components/pet/List";
 import {setExploreNavigator} from '../../services/Navigation';
+import {bindActionCreators} from "redux";
+import {fetchPets} from "../../store/pet/actions";
 
 class Explore extends Component {
     componentDidMount() {
         setExploreNavigator(this.props.navigation);
+        this.props.fetchPets();
     }
 
     render() {
         return (
             <View style={styles.container}>
+                {console.log(this.props.pets)}
                 {
                     this.props.pets.items.length > 0
                         ?
@@ -50,9 +54,17 @@ const styles = StyleSheet.create({
     },
 });
 
+const mapDispatchToProps = dispatch =>
+    bindActionCreators(
+        {
+            fetchPets
+        },
+        dispatch
+    );
+
 const mapStateToProps = state => ({
     auth: state.auth,
     pets: state.pets
 });
 
-export default connect(mapStateToProps)(Explore);
+export default connect(mapStateToProps, mapDispatchToProps)(Explore);

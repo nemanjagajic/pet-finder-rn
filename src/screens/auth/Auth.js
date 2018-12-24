@@ -34,7 +34,7 @@ class Auth extends Component {
     };
 
     handleRegister = () => {
-        const {fullName, username, password, rePassword} = this.state;af
+        const {fullName, username, password, rePassword} = this.state;
         this.setState(() => ({validRePassword: true}));
 
 

@@ -10,7 +10,7 @@ import BottomButton from "../../components/UI/BottomButton";
 import PickLocation from "../../components/map/PickLocation";
 import AddImage from "../../components/image/AddImage";
 import ButtonCustom from "../../components/UI/ButtonCustom";
-import {addFoundPet} from "../../store/pet/actions";
+import {postFoundPet} from "../../store/pet/actions";
 
 
 class AddFoundPet extends Component {
@@ -83,7 +83,7 @@ class AddFoundPet extends Component {
             date: new Date()
         };
 
-        this.props.addFoundPet(pet);
+        this.props.postFoundPet(pet);
         this.props.navigation.pop();
     };
 
@@ -200,7 +200,7 @@ const styles = StyleSheet.create({
 const mapDispatchToProps = dispatch =>
     bindActionCreators(
         {
-            addFoundPet
+            postFoundPet
         },
         dispatch
     );
