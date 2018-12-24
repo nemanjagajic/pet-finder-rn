@@ -1,6 +1,6 @@
 import { call, put } from 'redux-saga/effects';
 import petService from '../../services/api/PetService';
-import {setPets} from './actions'
+import {setPets, addFoundPet} from './actions'
 
 export function* postFoundPet(action) {
     try {
@@ -19,7 +19,9 @@ export function* postFoundPet(action) {
         };
 
         const response = yield call(petService.postPet, postRequest);
-        console.log(response);
+        if (response.status === 200) {
+            yield put(addFoundPet(postRequest));
+        }
     } catch (error) {
         console.log(error);
     }

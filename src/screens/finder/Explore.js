@@ -18,7 +18,6 @@ class Explore extends Component {
     render() {
         return (
             <View style={styles.container}>
-                {console.log(this.props.pets)}
                 {
                     this.props.pets.items.length > 0
                         ?

@@ -9,10 +9,20 @@ const PetItem = props => {
         <TouchableWithoutFeedback
             onPress={() => exploreNavigate('FoundPet', {
                 image: props.image,
-                location: props.location,
-                locationInfo: props.locationInfo,
+                location: {
+                    latitude: props.latitude,
+                    longitude: props.longitude,
+                    latitudeDelta: 0.015,
+                    longitudeDelta: 0.0121
+                },
+                locationInfo: {
+                    street: props.street,
+                    name: props.name,
+                    country: props.country,
+                    city: props.city
+                },
                 description: props.description,
-                date: props.date
+                createdAt: props.created_at
             })}
         >
             <View style={styles.container}>
@@ -33,7 +43,7 @@ const PetItem = props => {
                         <View style={styles.infoItem}>
                             <Ionicons name='ios-time' size={18} color={'#26A69A'}/>
                             <Text style={styles.infoText}>
-                                {/*{`${props.date.getDate()}.${props.date.getMonth() + 1}.${props.date.getFullYear()} ${props.date.getHours()}:${props.date.getMinutes()}`}*/}
+                                {props.created_at}
                             </Text>
                         </View>
                     </View>

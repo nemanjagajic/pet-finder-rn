@@ -4,7 +4,6 @@ import {View, StyleSheet, Text, Platform, ScrollView} from 'react-native';
 import PickedLocation from "../../components/map/PickedLocation";
 import ShowImage from "../../components/image/ShowImage";
 import {Ionicons} from '@expo/vector-icons';
-import Header from "../../components/UI/Header";
 
 class FoundPet extends Component {
 
@@ -56,7 +55,7 @@ class FoundPet extends Component {
                             <View style={styles.infoItem}>
                                 <Ionicons name='ios-time' size={18} color={'#26A69A'}/>
                                 <Text style={styles.infoText}>
-                                    {`${pet.date.getDate()}.${pet.date.getMonth() + 1}.${pet.date.getFullYear()} ${pet.date.getHours()}:${pet.date.getMinutes()}`}
+                                    {pet.createdAt}
                                 </Text>
                             </View>
                             <View style={styles.infoItem}>
