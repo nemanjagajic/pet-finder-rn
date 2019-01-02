@@ -6,7 +6,7 @@ export function* logIn(action) {
     try {
         const response = yield call(authService.startLogin, action.user);
         if (response.status === 200) {
-            yield put(setLoggedUser(action.user));
+            yield put(setLoggedUser(response.data[0]));
         }
     } catch (error) {
         const { status } = error.response;

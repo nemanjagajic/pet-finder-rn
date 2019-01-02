@@ -76,6 +76,7 @@ class AddFoundPet extends Component {
         }
 
         const pet = {
+            user: this.props.loggedUser,
             location: focusedLocation,
             locationInfo,
             image,
@@ -205,4 +206,8 @@ const mapDispatchToProps = dispatch =>
         dispatch
     );
 
-export default connect(null, mapDispatchToProps)(AddFoundPet);
+const mapStateToProps = state => ({
+    loggedUser: state.auth.loggedUser
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddFoundPet);

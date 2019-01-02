@@ -7,7 +7,7 @@ export function* postFoundPet(action) {
         const pet = action.pet;
 
         const postRequest = {
-            userId: 1,
+            userId: pet.user.id,
             image: pet.image,
             description: pet.description,
             latitude: pet.location.latitude,
@@ -19,8 +19,13 @@ export function* postFoundPet(action) {
         };
 
         const response = yield call(petService.postPet, postRequest);
+        const date = new Date();
         if (response.status === 200) {
-            yield put(addFoundPet(postRequest));
+            yield put(addFoundPet({
+                ...postRequest,
+                id: response.data.id,
+                created_at: `${date.getFullYear()}-${(date.getMonth() + 1) < 10 ? '0' : ''}${date.getMonth() + 1}-${(date.getDate()) < 10 ? '0' : ''}${date.getDate()} ${(date.getHours()) < 10 ? '0' : ''}${date.getHours()}:${(date.getMinutes()) < 10 ? '0' : ''}${date.getMinutes()}:${(date.getSeconds()) < 10 ? '0' : ''}${date.getSeconds()}`
+            }));
         }
     } catch (error) {
         console.log(error);

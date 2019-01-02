@@ -61,7 +61,7 @@ class FoundPet extends Component {
                             <View style={styles.infoItem}>
                                 <Ionicons name='md-contact' size={18} color={'#26A69A'}/>
                                 <Text style={styles.infoText}>
-                                    nemanjagajic
+                                    {pet.userId}
                                 </Text>
                             </View>
                         </View>

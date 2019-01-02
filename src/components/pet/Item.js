@@ -21,6 +21,7 @@ const PetItem = props => {
                     country: props.country,
                     city: props.city
                 },
+                userId: props.userId,
                 description: props.description,
                 createdAt: props.created_at
             })}
