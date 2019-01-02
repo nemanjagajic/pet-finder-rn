@@ -4,18 +4,25 @@ import {View, StyleSheet, Text, Platform, ScrollView} from 'react-native';
 import PickedLocation from "../../components/map/PickedLocation";
 import ShowImage from "../../components/image/ShowImage";
 import {Ionicons} from '@expo/vector-icons';
+import userService from '../../services/api/UserService';
 
 class FoundPet extends Component {
 
     state = {
-        showMap: false
+        showMap: false,
+        user: null
     };
 
-    componentDidMount() {
+    async componentDidMount() {
+        const response = await userService.getById(this.props.navigation.state.params.userId);
+        this.setState({
+            user: response.data[0]
+        });
+
         setTimeout(() => {
             this.setState({
                 showMap: true
-            })
+            });
         }, 250);
     }
 
@@ -61,7 +68,7 @@ class FoundPet extends Component {
                             <View style={styles.infoItem}>
                                 <Ionicons name='md-contact' size={18} color={'#26A69A'}/>
                                 <Text style={styles.infoText}>
-                                    {pet.userId}
+                                    {this.state.user && this.state.user.username}
                                 </Text>
                             </View>
                         </View>
