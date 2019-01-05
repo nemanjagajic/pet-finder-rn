@@ -1,4 +1,6 @@
 import {createMaterialTopTabNavigator} from "react-navigation";
+import {Dimensions} from 'react-native';
+
 import Explore from "../../screens/finder/Explore";
 import Adopt from "../../screens/adopt/Adopt";
 
@@ -11,14 +13,21 @@ const MainTabNavigation = createMaterialTopTabNavigator(
         tabBarOptions: {
             labelStyle: {
                 fontSize: 12,
+                width: Dimensions.get('window').width / 2
             },
             tabStyle: {
-                width: 100
+                width: Dimensions.get('window').width / 2
             },
             style: {
                 backgroundColor: '#009688',
-                paddingTop: 50
+                width: Dimensions.get('window').width
             },
+            indicatorStyle: {
+                backgroundColor: '#fff',
+                height: 2,
+                borderRadius: 10,
+                marginBottom: 1
+            }
         }
     }
 );

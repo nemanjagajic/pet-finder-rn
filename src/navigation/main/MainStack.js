@@ -9,9 +9,11 @@ const MainStack = createStackNavigator(
         MainTabNavigation: {
             screen: MainTabNavigation,
             navigationOptions: {
+                title: 'Pet finder',
                 headerStyle: {
-                    display: 'none'
-                }
+                    backgroundColor: '#009688'
+                },
+                headerTintColor: '#fff'
             }
         },
         AddPet: {
