@@ -21,7 +21,7 @@ class Auth extends Component {
 
     componentDidUpdate() {
         if (this.props.loggedUser && typeof(this.props.loggedUser) !== 'number') {
-            this.props.navigation.navigate('ExploreStack');
+            this.props.navigation.navigate('MainStack');
         }
     }
 

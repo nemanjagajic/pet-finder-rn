@@ -1,19 +1,17 @@
 import {createStackNavigator} from "react-navigation";
-import Explore from "../../screens/finder/Explore";
 import AddPet from "../../screens/finder/AddFoundPet";
 import CustomCamera from "../../components/image/CustomCamera";
 import FoundPet from "../../screens/finder/FoundPet";
+import MainTabNavigation from "./MainTabNavigation";
 
-const ExploreNavigation = createStackNavigator(
+const MainStack = createStackNavigator(
     {
-        Explore: {
-            screen: Explore,
+        MainTabNavigation: {
+            screen: MainTabNavigation,
             navigationOptions: {
-                title: 'Explore',
                 headerStyle: {
-                    backgroundColor: '#009688'
-                },
-                headerTintColor: '#fff'
+                    display: 'none'
+                }
             }
         },
         AddPet: {
@@ -48,8 +46,8 @@ const ExploreNavigation = createStackNavigator(
         }
     },
     {
-        initialRoute: Explore
+        initialRoute: MainTabNavigation
     }
 );
 
-export default ExploreNavigation;
+export default MainStack;

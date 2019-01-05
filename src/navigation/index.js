@@ -1,12 +1,11 @@
 import {createSwitchNavigator} from "react-navigation";
 import Auth from "../screens/auth/Auth";
-import ExploreNavigation from "./explore/ExploreNavigation";
-
+import MainStack from "./main/MainStack";
 
 const RootNavigation = createSwitchNavigator(
     {
         Auth: Auth,
-        ExploreStack: ExploreNavigation
+        MainStack: MainStack
     },
     {
         initialRoute: Auth
