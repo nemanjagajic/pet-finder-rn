@@ -1,22 +1,24 @@
 import {createMaterialTopTabNavigator} from "react-navigation";
 import {Dimensions} from 'react-native';
 
-import Explore from "../../screens/finder/Explore";
-import Adopt from "../../screens/adopt/Adopt";
+import FoundPetsScreen from "../../screens/finder/FoundPetsScreen";
+import AdoptScreen from "../../screens/adopt/AdoptScreen";
+import LostPetsScreen from "../../screens/lost/LostPetsScreen";
 
 const MainTabNavigation = createMaterialTopTabNavigator(
     {
-        Explore: Explore,
-        Adopt: Adopt
+        Found: FoundPetsScreen,
+        Lost: LostPetsScreen,
+        Adopt: AdoptScreen
     },
     {
         tabBarOptions: {
             labelStyle: {
                 fontSize: 12,
-                width: Dimensions.get('window').width / 2
+                width: Dimensions.get('window').width / 3
             },
             tabStyle: {
-                width: Dimensions.get('window').width / 2
+                width: Dimensions.get('window').width / 3
             },
             style: {
                 backgroundColor: '#009688',

@@ -9,7 +9,7 @@ import ButtonCustom from "../../components/UI/ButtonCustom";
 import InputField from "../../components/UI/InputField";
 import {logIn, register} from '../../store/auth/actions';
 
-class Auth extends Component {
+class AuthScreen extends Component {
     state = {
         selectedOption: 'login',
         fullName: '',
@@ -236,4 +236,4 @@ const mapDispatchToProps = dispatch =>
         dispatch
     );
 
-export default connect(mapStateToProps, mapDispatchToProps)(Auth);
+export default connect(mapStateToProps, mapDispatchToProps)(AuthScreen);

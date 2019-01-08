@@ -13,7 +13,7 @@ import ButtonCustom from "../../components/UI/ButtonCustom";
 import {postFoundPet} from "../../store/pet/actions";
 
 
-class AddFoundPet extends Component {
+class AddFoundPetScreen extends Component {
     state = {
         showMap: false,
         focusedLocation: {
@@ -210,4 +210,4 @@ const mapStateToProps = state => ({
     loggedUser: state.auth.loggedUser
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddFoundPet);
+export default connect(mapStateToProps, mapDispatchToProps)(AddFoundPetScreen);

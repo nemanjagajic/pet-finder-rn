@@ -6,7 +6,7 @@ import ShowImage from "../../components/image/ShowImage";
 import {Ionicons} from '@expo/vector-icons';
 import userService from '../../services/api/UserService';
 
-class FoundPet extends Component {
+class FoundPetScreen extends Component {
 
     state = {
         showMap: false,
@@ -137,4 +137,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default FoundPet;
+export default FoundPetScreen;

@@ -7,7 +7,7 @@ import {exploreNavigate} from '../../services/Navigation';
 const PetItem = props => {
     return (
         <TouchableWithoutFeedback
-            onPress={() => exploreNavigate('FoundPet', {
+            onPress={() => exploreNavigate('FoundPetScreen', {
                 image: props.image,
                 location: {
                     latitude: props.latitude,

@@ -5,13 +5,13 @@ import {Ionicons} from '@expo/vector-icons';
 
 import FloatingButton from "../../components/UI/FloatingButton";
 import PetList from "../../components/pet/List";
-import {setExploreNavigator} from '../../services/Navigation';
+import {setFoundPetsScreenNavigator} from '../../services/Navigation';
 import {bindActionCreators} from "redux";
 import {fetchPets} from "../../store/pet/actions";
 
-class Explore extends Component {
+class FoundPetsScreen extends Component {
     componentDidMount() {
-        setExploreNavigator(this.props.navigation);
+        setFoundPetsScreenNavigator(this.props.navigation);
         this.props.fetchPets();
     }
 
@@ -66,4 +66,4 @@ const mapStateToProps = state => ({
     pets: state.pets
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Explore);
+export default connect(mapStateToProps, mapDispatchToProps)(FoundPetsScreen);
