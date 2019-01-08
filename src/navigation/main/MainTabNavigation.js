@@ -15,21 +15,20 @@ const MainTabNavigation = createMaterialTopTabNavigator(
         tabBarOptions: {
             labelStyle: {
                 fontSize: 12,
+                color: "#009688",
                 width: Dimensions.get('window').width / 3
             },
             tabStyle: {
                 width: Dimensions.get('window').width / 3
             },
             style: {
-                backgroundColor: '#009688',
+                backgroundColor: '#fff',
                 width: Dimensions.get('window').width
             },
             indicatorStyle: {
-                backgroundColor: '#fff',
-                height: 2,
+                backgroundColor: '#009688',
                 borderRadius: 10,
-                marginBottom: 1
-            }
+            },
         }
     }
 );
