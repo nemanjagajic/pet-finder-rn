@@ -1,6 +1,6 @@
 import {createStackNavigator} from "react-navigation";
-import AddFoundPetScreen from "../../screens/finder/AddFoundPetScreen";
-import FoundPetScreen from "../../screens/finder/FoundPetScreen";
+import AddFoundPetScreen from "../../screens/found/AddFoundPetScreen";
+import FoundPetScreen from "../../screens/found/FoundPetScreen";
 import MainTabNavigation from "./MainTabNavigation";
 
 const MainStack = createStackNavigator(
@@ -8,7 +8,7 @@ const MainStack = createStackNavigator(
         MainTabNavigation: {
             screen: MainTabNavigation,
             navigationOptions: {
-                title: 'Pet finder',
+                title: 'Pet found',
                 headerStyle: {
                     backgroundColor: '#009688'
                 },

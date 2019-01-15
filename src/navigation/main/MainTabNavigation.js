@@ -1,7 +1,7 @@
 import {createMaterialTopTabNavigator} from "react-navigation";
 import {Dimensions} from 'react-native';
 
-import FoundPetsScreen from "../../screens/finder/FoundPetsScreen";
+import FoundPetsScreen from "../../screens/found/FoundPetsScreen";
 import AdoptScreen from "../../screens/adopt/AdoptScreen";
 import LostPetsScreen from "../../screens/lost/LostPetsScreen";
 

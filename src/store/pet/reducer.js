@@ -1,4 +1,4 @@
-import {ADD_FOUND_PET, SET_PETS} from "./constants";
+import {ADD_FOUND_PET, SET_PET_ADS, SET_PETS} from "./constants";
 
 const initialState = {
     items: []
@@ -15,6 +15,11 @@ const petReducer = (state = initialState, action) => {
             return {
                 ...state,
                 items: action.items
+            };
+        case SET_PET_ADS:
+            return {
+                ...state,
+                adItems: action.items
             };
         default:
             return state;
