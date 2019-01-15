@@ -1,6 +1,5 @@
 import {createStackNavigator} from "react-navigation";
-import AddPet from "../../screens/finder/AddFoundPetScreen";
-import CustomCamera from "../../components/image/CustomCamera";
+import AddFoundPetScreen from "../../screens/finder/AddFoundPetScreen";
 import FoundPetScreen from "../../screens/finder/FoundPetScreen";
 import MainTabNavigation from "./MainTabNavigation";
 
@@ -17,19 +16,9 @@ const MainStack = createStackNavigator(
             }
         },
         AddPet: {
-            screen: AddPet,
+            screen: AddFoundPetScreen,
             navigationOptions: {
                 title: 'Add found pet',
-                headerStyle: {
-                    backgroundColor: '#009688'
-                },
-                headerTintColor: '#fff'
-            }
-        },
-        Camera: {
-            screen: CustomCamera,
-            navigationOptions: {
-                title: 'Camera',
                 headerStyle: {
                     backgroundColor: '#009688'
                 },
