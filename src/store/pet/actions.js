@@ -1,4 +1,12 @@
-import {ADD_FOUND_PET, POST_FOUND_PET, FETCH_PETS, SET_PETS, FETCH_PET_ADS, SET_PET_ADS} from "./constants";
+import {
+    ADD_FOUND_PET,
+    POST_FOUND_PET,
+    FETCH_PETS,
+    SET_PETS,
+    FETCH_PET_ADS,
+    SET_PET_ADS,
+    ADD_LOST_PET, POST_LOST_PET
+} from "./constants";
 
 export const addFoundPet = pet => ({
     type: ADD_FOUND_PET,
@@ -26,4 +34,14 @@ export const fetchPetAds = () => ({
 export const setPetAds = items => ({
    type: SET_PET_ADS,
    items
+});
+
+export const addLostPet = pet => ({
+    type: ADD_LOST_PET,
+    pet
+});
+
+export const postLostPet = pet => ({
+   type: POST_LOST_PET,
+    pet
 });

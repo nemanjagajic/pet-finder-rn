@@ -1,7 +1,8 @@
-import {ADD_FOUND_PET, SET_PET_ADS, SET_PETS} from "./constants";
+import {ADD_FOUND_PET, ADD_LOST_PET, SET_PET_ADS, SET_PETS} from "./constants";
 
 const initialState = {
-    items: []
+    items: [],
+    adItems: []
 };
 
 const petReducer = (state = initialState, action) => {
@@ -20,6 +21,11 @@ const petReducer = (state = initialState, action) => {
             return {
                 ...state,
                 adItems: action.items
+            };
+        case ADD_LOST_PET:
+            return {
+                ...state,
+                adItems: state.adItems.concat(action.pet)
             };
         default:
             return state;

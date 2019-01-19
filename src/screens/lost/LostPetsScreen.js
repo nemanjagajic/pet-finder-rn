@@ -4,6 +4,7 @@ import {View, Text, StyleSheet} from 'react-native';
 import PetAdList from "../../components/petAd/List";
 import {bindActionCreators} from "redux";
 import {fetchPetAds} from "../../store/pet/actions";
+import FloatingButton from "../../components/UI/FloatingButton";
 
 class FoundPetsScreen extends Component {
     componentDidMount() {
@@ -14,7 +15,12 @@ class FoundPetsScreen extends Component {
         return (
             <View style={styles.container}>
                 {console.log(this.props.adItems)}
-                <PetAdList pets={[{description: 'da'}, {description: 'heh'}]} />
+                <PetAdList pets={[]} />
+                <FloatingButton
+                    onPress={() => this.props.navigation.navigate('AddLostPet')}
+                    color={'#009688'}
+                    icon={'md-add'}
+                />
             </View>
         );
     }
@@ -22,8 +28,10 @@ class FoundPetsScreen extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 20
-    }
+        flex: 1,
+        alignItems: 'center',
+        backgroundColor: '#f2f2f2'
+    },
 });
 
 const mapDispatchToProps = dispatch =>

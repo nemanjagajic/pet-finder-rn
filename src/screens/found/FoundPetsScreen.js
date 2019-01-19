@@ -31,7 +31,8 @@ class FoundPetsScreen extends Component {
                 <FloatingButton
                     onPress={() => this.props.navigation.navigate('AddPet')}
                     color={'#009688'}
-                    icon={'md-add'}/>
+                    icon={'md-add'}
+                />
             </View>
         );
     }

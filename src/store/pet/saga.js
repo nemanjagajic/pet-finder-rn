@@ -1,6 +1,6 @@
 import { call, put } from 'redux-saga/effects';
 import petService from '../../services/api/PetService';
-import {setPets, addFoundPet, setPetAds} from './actions'
+import {setPets, addFoundPet, setPetAds, addLostPet} from './actions'
 
 export function* postFoundPet(action) {
     try {
@@ -48,6 +48,35 @@ export function* fetchPetAds() {
         const response = yield call(petService.fetchPetAds);
         if (response.status === 200) {
             yield put(setPetAds(response.data));
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export function* postLostPet(action) {
+    try {
+        const pet = action.pet;
+
+        const postRequest = {
+            userId: pet.user.id,
+            image: pet.image,
+            description: pet.description,
+            locationInfo: pet.locationInfo,
+            phoneNumber: pet.phoneNumber,
+            type: 1
+        };
+
+        console.log(postRequest);
+
+        const response = yield call(petService.postPetAd, postRequest);
+        const date = new Date();
+        if (response.status === 200) {
+            yield put(addLostPet({
+                ...postRequest,
+                id: response.data.id,
+                created_at: `${date.getFullYear()}-${(date.getMonth() + 1) < 10 ? '0' : ''}${date.getMonth() + 1}-${(date.getDate()) < 10 ? '0' : ''}${date.getDate()} ${(date.getHours()) < 10 ? '0' : ''}${date.getHours()}:${(date.getMinutes()) < 10 ? '0' : ''}${date.getMinutes()}:${(date.getSeconds()) < 10 ? '0' : ''}${date.getSeconds()}`
+            }));
         }
     } catch (error) {
         console.log(error);
