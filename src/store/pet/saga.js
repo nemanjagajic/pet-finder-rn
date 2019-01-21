@@ -1,6 +1,6 @@
 import { call, put } from 'redux-saga/effects';
 import petService from '../../services/api/PetService';
-import {setPets, addFoundPet, setLostPets, addLostPet, setAdoptingPets} from './actions'
+import {setPets, addFoundPet, setLostPets, addLostPet, setAdoptingPets, addAdoptingPet} from './actions'
 
 export function* postFoundPet(action) {
     try {
@@ -78,14 +78,22 @@ export function* postPetAd(action) {
             type: pet.type
         };
 
+        console.log(postRequest);
+
         const response = yield call(petService.postPetAd, postRequest);
+        console.log(response);
         const date = new Date();
         if (response.status === 200) {
-            yield put(addLostPet({
+            const petToAdd = {
                 ...postRequest,
                 id: response.data.id,
                 created_at: `${date.getFullYear()}-${(date.getMonth() + 1) < 10 ? '0' : ''}${date.getMonth() + 1}-${(date.getDate()) < 10 ? '0' : ''}${date.getDate()} ${(date.getHours()) < 10 ? '0' : ''}${date.getHours()}:${(date.getMinutes()) < 10 ? '0' : ''}${date.getMinutes()}:${(date.getSeconds()) < 10 ? '0' : ''}${date.getSeconds()}`
-            }));
+            };
+            if (pet.type === 1) {
+                yield put(addLostPet(petToAdd));
+            } else {
+                yield put(addAdoptingPet(petToAdd));
+            }
         }
     } catch (error) {
         console.log(error);

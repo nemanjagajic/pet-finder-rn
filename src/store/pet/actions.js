@@ -6,7 +6,10 @@ import {
     FETCH_LOST_PETS,
     SET_LOST_PETS,
     ADD_LOST_PET,
-    POST_PET_AD, FETCH_ADOPTING_PETS, SET_ADOPTING_PETS
+    POST_PET_AD,
+    FETCH_ADOPTING_PETS,
+    SET_ADOPTING_PETS,
+    ADD_ADOPTING_PET
 } from "./constants";
 
 export const addFoundPet = pet => ({
@@ -57,6 +60,6 @@ export const setAdoptingPets = items => ({
 });
 
 export const addAdoptingPet = pet => ({
-    type: ADD_LOST_PET,
+    type: ADD_ADOPTING_PET,
     pet
 });

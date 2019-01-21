@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, Text, Platform, ScrollView} from 'react-native';
+import {View, StyleSheet, Text, ScrollView} from 'react-native';
 
-import PickedLocation from "../../components/map/PickedLocation";
 import ShowImage from "../../components/image/ShowImage";
 import {Ionicons} from '@expo/vector-icons';
 import userService from '../../services/api/UserService';
@@ -26,6 +25,9 @@ class PetAdDetailsScreen extends Component {
             <ScrollView contentContainerStyle={styles.container}>
                 <View style={styles.row}>
                     <ShowImage image={pet.image}/>
+                    <View style={styles.infoFullLine}>
+                        <Text style={[styles.infoText, {fontSize: 14}]}>{pet.type === 1 ? 'Lost pet' : 'Pet to adopt'}</Text>
+                    </View>
                     <View style={styles.info}>
                         <View style={styles.infoItemPair}>
                             <View style={styles.infoItem}>
@@ -68,7 +70,7 @@ class PetAdDetailsScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         minHeight: '100%',
-        backgroundColor: '#f2f2f2',
+        backgroundColor: '#fff',
         alignItems: 'center'
     },
     row: {
@@ -99,7 +101,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         padding: 5,
         width: '48%',
-        backgroundColor: '#e6e6e6',
+        backgroundColor: '#f2f2f2',
         borderRadius: 10,
         borderWidth: 1,
         borderColor: '#ccc'
@@ -108,15 +110,25 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between'
     },
+    infoFullLine: {
+        width: '100%',
+        marginTop: 15,
+        padding: 5,
+        backgroundColor: '#f2f2f2',
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: '#ccc'
+    },
     description: {
         padding: 10,
         marginTop: 10,
         marginBottom: 20,
         width: '100%',
-        backgroundColor: '#fff',
+        backgroundColor: '#f2f2f2',
         borderRadius: 10,
         borderWidth: 1,
-        borderColor: '#d9d9d9'
+        borderColor: '#ccc',
+        minHeight: 80
     },
 });
 

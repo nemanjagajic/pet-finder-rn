@@ -13,6 +13,7 @@ const PetAdItem = props => {
                 phoneNumber: props.phoneNumber,
                 description: props.description,
                 createdAt: props.created_at,
+                type: props.type
             })}
         >
             <View style={styles.container}>

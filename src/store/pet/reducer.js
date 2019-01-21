@@ -36,7 +36,7 @@ const petReducer = (state = initialState, action) => {
         case ADD_ADOPTING_PET:
             return {
                 ...state,
-                adoptingPets: state.lostPets.concat(action.pet)
+                adoptingPets: state.adoptingPets.concat(action.pet)
             };
         default:
             return state;

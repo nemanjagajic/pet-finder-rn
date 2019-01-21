@@ -85,7 +85,7 @@ class FoundPetScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         minHeight: '100%',
-        backgroundColor: '#f2f2f2',
+        backgroundColor: '#fff',
         alignItems: 'center'
     },
     row: {
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         padding: 5,
         width: '48%',
-        backgroundColor: '#e6e6e6',
+        backgroundColor: '#f2f2f2',
         borderRadius: 10,
         borderWidth: 1,
         borderColor: '#ccc'
@@ -130,10 +130,10 @@ const styles = StyleSheet.create({
         marginTop: 10,
         marginBottom: 20,
         width: '100%',
-        backgroundColor: '#fff',
+        backgroundColor: '#f2f2f2',
         borderRadius: 10,
         borderWidth: 1,
-        borderColor: '#d9d9d9'
+        borderColor: '#ccc'
     },
 });
 
