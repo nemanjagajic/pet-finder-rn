@@ -4,6 +4,7 @@ import {BASE} from "./constants";
 const FETCH_PETS = `${BASE}/api/pets`;
 const POST_PET = `${BASE}/api/pets`;
 const FETCH_LOST_PETS = `${BASE}/api/lostPets`;
+const FETCH_ADOPTING_PETS = `${BASE}/api/adoptingPets`;
 const POST_PET_AD = `${BASE}/api/petAds`;
 
 class PetService {
@@ -17,6 +18,10 @@ class PetService {
 
     fetchLostPets = () => {
         return axios.get(FETCH_LOST_PETS);
+    };
+
+    fetchAdoptingPets = () => {
+        return axios.get(FETCH_ADOPTING_PETS);
     };
 
     postPetAd = petAd => {

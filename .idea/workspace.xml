@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1904bfd5-aa80-4dcb-9ce7-a1680bde6f9f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/screens/lost/LostPetScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pet/Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pet/Item.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/petAd/Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/petAd/Item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/petAd/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/petAd/List.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/navigation/main/MainStack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/main/MainStack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/adopt/AdoptScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/adopt/AdoptScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/lost/AddLostPetScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/petAd/AddPetAdScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/lost/LostPetScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/petAd/PetAdDetailsScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/lost/LostPetsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/lost/LostPetsScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/api/PetService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api/PetService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/pet/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/pet/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/pet/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/pet/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/pet/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/pet/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/pet/saga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/pet/saga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/sagas-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/sagas-index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,23 +42,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="308" />
+          <entry key="js" value="329" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="308" />
+          <entry key="JavaScript" value="329" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="30" />
-          <entry key="js" value="34466" />
+          <entry key="js" value="34989" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="34466" />
+          <entry key="JavaScript" value="34989" />
           <entry key="PLAIN_TEXT" value="30" />
         </counts>
       </usages-collector>
@@ -61,55 +67,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/petAd/Item.js">
+        <entry file="file://$PROJECT_DIR$/src/screens/lost/LostPetsScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+            <state relative-caret-position="885">
+              <caret line="59" column="6" lean-forward="true" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/navigation/main/MainStack.js">
+        <entry file="file://$PROJECT_DIR$/src/screens/petAd/AddPetAdScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="52" column="34" lean-forward="true" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+            <state relative-caret-position="405">
+              <caret line="27" column="75" lean-forward="true" selection-start-line="27" selection-start-column="75" selection-end-line="27" selection-end-column="75" />
               <folding>
-                <element signature="e#0#54#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pet/Item.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/screens/lost/LostPetScreen.js">
+        <entry file="file://$PROJECT_DIR$/src/navigation/main/MainStack.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="35" column="35" lean-forward="true" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/screens/found/FoundPetScreen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+            <state relative-caret-position="630">
+              <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,8 +113,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>CO</find>
-      <find>pickImage</find>
       <find>Camera</find>
       <find>AddImage</find>
       <find>onImageA</find>
@@ -149,12 +135,14 @@
       <find>FoundPet</find>
       <find>AddPet</find>
       <find>Pet Fou</find>
-      <find>console.log</find>
       <find>setFoundPetsScreenNavigator</find>
       <find>foundPetsNavigate</find>
       <find>mainStackNavigate</find>
       <find>navigation</find>
       <find>petAds</find>
+      <find>postLostPet</find>
+      <find>console.log</find>
+      <find>lost</find>
     </findStrings>
     <replaceStrings>
       <replace>FF9800</replace>
@@ -180,12 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/image/CustomCamera.js" />
-        <option value="$PROJECT_DIR$/src/components/map/PickedLocation.js" />
-        <option value="$PROJECT_DIR$/src/components/image/Image.js" />
-        <option value="$PROJECT_DIR$/src/components/image/CustomImage.js" />
-        <option value="$PROJECT_DIR$/src/components/image/ShowImage.js" />
-        <option value="$PROJECT_DIR$/src/components/image/AddImage.js" />
         <option value="$PROJECT_DIR$/src/store/saga-index.js" />
         <option value="$PROJECT_DIR$/src/store/index.js" />
         <option value="$PROJECT_DIR$/src/services/api/Base.js" />
@@ -217,20 +199,26 @@
         <option value="$PROJECT_DIR$/src/screens/found/FoundPetsScreen.js" />
         <option value="$PROJECT_DIR$/src/screens/lost/AddLostPet.js" />
         <option value="$PROJECT_DIR$/src/screens/found/AddFoundPetScreen.js" />
-        <option value="$PROJECT_DIR$/src/store/sagas-index.js" />
-        <option value="$PROJECT_DIR$/src/screens/lost/AddLostPetScreen.js" />
         <option value="$PROJECT_DIR$/src/services/Navigation.js" />
-        <option value="$PROJECT_DIR$/src/store/pet/reducer.js" />
-        <option value="$PROJECT_DIR$/src/store/pet/saga.js" />
-        <option value="$PROJECT_DIR$/src/store/pet/actions.js" />
-        <option value="$PROJECT_DIR$/src/store/pet/constants.js" />
-        <option value="$PROJECT_DIR$/src/services/api/PetService.js" />
-        <option value="$PROJECT_DIR$/src/screens/lost/LostPetsScreen.js" />
         <option value="$PROJECT_DIR$/src/components/petAd/List.js" />
         <option value="$PROJECT_DIR$/src/components/pet/Item.js" />
-        <option value="$PROJECT_DIR$/src/navigation/main/MainStack.js" />
-        <option value="$PROJECT_DIR$/src/components/petAd/Item.js" />
         <option value="$PROJECT_DIR$/src/screens/lost/LostPetScreen.js" />
+        <option value="$PROJECT_DIR$/src/services/api/PetService.js" />
+        <option value="$PROJECT_DIR$/src/store/pet/reducer.js" />
+        <option value="$PROJECT_DIR$/src/store/pet/constants.js" />
+        <option value="$PROJECT_DIR$/src/store/pet/saga.js" />
+        <option value="$PROJECT_DIR$/src/screens/lost/LostPetsScreen.js" />
+        <option value="$PROJECT_DIR$/src/screens/adopt/AdoptScreen.js" />
+        <option value="$PROJECT_DIR$/src/store/sagas-index.js" />
+        <option value="$PROJECT_DIR$/src/store/pet/actions.js" />
+        <option value="$PROJECT_DIR$/src/components/petAd/Item.js" />
+        <option value="$PROJECT_DIR$/src/screens/lost/PetAdDetailsScreen.js" />
+        <option value="$PROJECT_DIR$/src/screens/PetAdDetailsScreen.js" />
+        <option value="$PROJECT_DIR$/src/screens/lost/AddLostPetScreen.js" />
+        <option value="$PROJECT_DIR$/src/screens/lost/AddPetAdScreen.js" />
+        <option value="$PROJECT_DIR$/src/screens/AddPetAdScreen.js" />
+        <option value="$PROJECT_DIR$/src/screens/petAd/AddPetAdScreen.js" />
+        <option value="$PROJECT_DIR$/src/navigation/main/MainStack.js" />
       </list>
     </option>
   </component>
@@ -292,13 +280,6 @@
               <item name="pet-finder" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="pet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pet-finder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pet-finder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="petAd" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -320,33 +301,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="pet-finder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pet-finder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="screens" type="462c0819:PsiDirectoryNode" />
-              <item name="found" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pet-finder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pet-finder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="screens" type="462c0819:PsiDirectoryNode" />
-              <item name="lost" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pet-finder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pet-finder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pet-finder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pet-finder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="pet" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -363,6 +317,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/screens/petAd" />
+      <recent name="$PROJECT_DIR$/src/screens" />
       <recent name="$PROJECT_DIR$/src/navigation/main" />
     </key>
   </component>
@@ -415,12 +371,12 @@
       <workItem from="1547576491858" duration="3544000" />
       <workItem from="1547630128773" duration="138000" />
       <workItem from="1547919135251" duration="4917000" />
-      <workItem from="1548103053751" duration="2794000" />
+      <workItem from="1548103053751" duration="5499000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150221000" />
+    <option name="totallyTimeSpent" value="152926000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -588,13 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/adopt/AdoptScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/screens/auth/AuthScreen.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -617,16 +566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/sagas-index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/screens/found/AddFoundPetScreen.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2850">
@@ -641,98 +580,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/found/FoundPetsScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/lost/AddLostPetScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/pet/saga.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="52" column="27" lean-forward="true" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/pet/constants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="48" lean-forward="true" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/pet/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#169#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/pet/reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/lost/LostPetsScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/petAd/List.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/api/PetService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/found/FoundPetScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pet/Item.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -763,19 +614,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/navigation/main/MainStack.js">
+    <entry file="file://$PROJECT_DIR$/src/screens/found/FoundPetScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="34" lean-forward="true" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+        <state relative-caret-position="435">
+          <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/api/PetService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/found/FoundPetsScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="44" lean-forward="true" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/pet/constants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/adopt/AdoptScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
           <folding>
-            <element signature="e#0#54#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/pet/reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="25" lean-forward="true" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/sagas-index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/pet/saga.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="60" column="30" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/pet/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="44" column="34" lean-forward="true" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pet/Item.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/petAd/PetAdDetailsScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/petAd/Item.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="225">
           <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -783,10 +713,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/lost/LostPetScreen.js">
+    <entry file="file://$PROJECT_DIR$/src/screens/lost/LostPetsScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="35" column="35" lean-forward="true" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+        <state relative-caret-position="885">
+          <caret line="59" column="6" lean-forward="true" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/petAd/AddPetAdScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="75" lean-forward="true" selection-start-line="27" selection-start-column="75" selection-end-line="27" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/navigation/main/MainStack.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

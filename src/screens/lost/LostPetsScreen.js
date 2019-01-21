@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, Text} from 'react-native';
 import PetAdList from "../../components/petAd/List";
 import {bindActionCreators} from "redux";
 import {fetchLostPets} from "../../store/pet/actions";
 import FloatingButton from "../../components/UI/FloatingButton";
+import {Ionicons} from '@expo/vector-icons';
 
 class FoundPetsScreen extends Component {
     componentDidMount() {
@@ -14,9 +15,18 @@ class FoundPetsScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <PetAdList pets={this.props.lostPets} />
+                {
+                    this.props.lostPets.length > 0
+                        ?
+                        <PetAdList pets={this.props.lostPets} />
+                        :
+                        <View style={styles.containerCenter}>
+                            <Ionicons name={'md-paw'} color={'#bfbfbf'} size={40}/>
+                            <Text style={styles.emptyListText}>No pets added yet</Text>
+                        </View>
+                }
                 <FloatingButton
-                    onPress={() => this.props.navigation.navigate('AddLostPet')}
+                    onPress={() => this.props.navigation.navigate('AddPetAd')}
                     color={'#009688'}
                     icon={'md-add'}
                 />
@@ -30,6 +40,14 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         backgroundColor: '#f2f2f2'
+    },
+    containerCenter: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    emptyListText: {
+        color: '#b3b3b3'
     },
 });
 

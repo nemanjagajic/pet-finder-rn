@@ -1,9 +1,9 @@
 import {createStackNavigator} from "react-navigation";
 import AddFoundPetScreen from "../../screens/found/AddFoundPetScreen";
-import AddLostPetScreen from '../../screens/lost/AddLostPetScreen';
+import AddLostPetScreen from '../../screens/petAd/AddPetAdScreen';
 import FoundPetScreen from "../../screens/found/FoundPetScreen";
 import MainTabNavigation from "./MainTabNavigation";
-import LostPetScreen from "../../screens/lost/LostPetScreen";
+import PetAdDetailsScreen from "../../screens/petAd/PetAdDetailsScreen";
 
 const MainStack = createStackNavigator(
     {
@@ -37,20 +37,20 @@ const MainStack = createStackNavigator(
                 headerTintColor: '#fff'
             }
         },
-        AddLostPet: {
+        AddPetAd: {
             screen: AddLostPetScreen,
             navigationOptions: {
-                title: 'Add lost pet',
+                title: 'Add pet',
                 headerStyle: {
                     backgroundColor: '#009688'
                 },
                 headerTintColor: '#fff'
             }
         },
-        LostPet: {
-            screen: LostPetScreen,
+        PetAdDetails: {
+            screen: PetAdDetailsScreen,
             navigationOptions: {
-                title: 'Lost pet',
+                title: 'Pet details',
                 headerStyle: {
                     backgroundColor: '#009688'
                 },

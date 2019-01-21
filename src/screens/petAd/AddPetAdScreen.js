@@ -14,9 +14,9 @@ import {Ionicons} from "../found/AddFoundPetScreen";
 import AddImage from "../../components/image/AddImage";
 import BottomButton from "../../components/UI/BottomButton";
 import {bindActionCreators} from "redux";
-import {postLostPet} from "../../store/pet/actions";
+import {postPetAd} from "../../store/pet/actions";
 
-class AddLostPetScreen extends Component {
+class AddPetAdScreen extends Component {
     state = {
         image: null,
         description: '',
@@ -41,10 +41,11 @@ class AddLostPetScreen extends Component {
             locationInfo,
             image,
             description,
-            phoneNumber
+            phoneNumber,
+            type: 1
         };
 
-        this.props.postLostPet(pet);
+        this.props.postPetAd(pet);
         this.props.navigation.pop();
     };
 
@@ -134,7 +135,7 @@ const styles = StyleSheet.create({
 const mapDispatchToProps = dispatch =>
     bindActionCreators(
         {
-            postLostPet
+            postPetAd
         },
         dispatch
     );
@@ -143,4 +144,4 @@ const mapStateToProps = state => ({
     loggedUser: state.auth.loggedUser
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddLostPetScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(AddPetAdScreen);

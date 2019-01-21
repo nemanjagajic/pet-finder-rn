@@ -6,13 +6,13 @@ import {mainStackNavigate} from "../../services/Navigation";
 const PetAdItem = props => {
     return (
         <TouchableWithoutFeedback
-            onPress={() => mainStackNavigate('LostPet', {
+            onPress={() => mainStackNavigate('PetAdDetails', {
                 userId: props.userId,
                 image: props.image,
                 locationInfo: props.locationInfo,
                 phoneNumber: props.phoneNumber,
                 description: props.description,
-                createdAt: props.created_at
+                createdAt: props.created_at,
             })}
         >
             <View style={styles.container}>

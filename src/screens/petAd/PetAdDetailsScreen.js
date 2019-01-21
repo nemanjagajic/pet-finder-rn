@@ -6,7 +6,7 @@ import ShowImage from "../../components/image/ShowImage";
 import {Ionicons} from '@expo/vector-icons';
 import userService from '../../services/api/UserService';
 
-class LostPetScreen extends Component {
+class PetAdDetailsScreen extends Component {
 
     state = {
         user: null
@@ -120,4 +120,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default LostPetScreen;
+export default PetAdDetailsScreen;
