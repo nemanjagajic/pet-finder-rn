@@ -14,8 +14,7 @@ class FoundPetsScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
-                {console.log(this.props.lostPets)}
-                <PetAdList pets={[]} />
+                <PetAdList pets={this.props.lostPets} />
                 <FloatingButton
                     onPress={() => this.props.navigation.navigate('AddLostPet')}
                     color={'#009688'}

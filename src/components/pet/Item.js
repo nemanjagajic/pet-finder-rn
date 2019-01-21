@@ -44,7 +44,7 @@ const PetItem = props => {
                         <View style={styles.infoItem}>
                             <Ionicons name='ios-time' size={18} color={'#26A69A'}/>
                             <Text style={styles.infoText}>
-                                {props.created_at}
+                                {props.created_at.substr(0, props.created_at.length - 3)}
                             </Text>
                         </View>
                     </View>

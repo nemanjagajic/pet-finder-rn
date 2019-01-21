@@ -8,7 +8,7 @@ const PetAdList = props => {
             contentContainerStyle={styles.container}
             data={props.pets}
             renderItem={pet => <PetAdItem {...pet.item} />}
-            // keyExtractor={pet => pet.id.toString()}
+            keyExtractor={pet => pet.id.toString()}
         />
     );
 };
