@@ -5,13 +5,13 @@ import {Ionicons} from '@expo/vector-icons';
 
 import FloatingButton from "../../components/UI/FloatingButton";
 import PetList from "../../components/pet/List";
-import {setFoundPetsScreenNavigator} from '../../services/Navigation';
+import {setMainStackNavigator} from '../../services/Navigation';
 import {bindActionCreators} from "redux";
 import {fetchPets} from "../../store/pet/actions";
 
 class FoundPetsScreen extends Component {
     componentDidMount() {
-        setFoundPetsScreenNavigator(this.props.navigation);
+        setMainStackNavigator(this.props.navigation);
         this.props.fetchPets();
     }
 

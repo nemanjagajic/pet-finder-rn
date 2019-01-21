@@ -2,10 +2,9 @@ import { NavigationActions } from 'react-navigation';
 
 let foundPetsScreenNavigator;
 
-export const setFoundPetsScreenNavigator = navigationRef => foundPetsScreenNavigator = navigationRef;
+export const setMainStackNavigator = navigationRef => foundPetsScreenNavigator = navigationRef;
 
-export const foundPetsNavigate = (routeName, params) => {
-    console.log(foundPetsScreenNavigator);
+export const mainStackNavigate = (routeName, params) => {
     if (foundPetsScreenNavigator && routeName) {
         foundPetsScreenNavigator.dispatch(
             NavigationActions.navigate({

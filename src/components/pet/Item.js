@@ -2,12 +2,12 @@ import React from 'react';
 import {View, Text, StyleSheet, Image, Platform, TouchableWithoutFeedback} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 
-import {foundPetsNavigate} from '../../services/Navigation';
+import {mainStackNavigate} from '../../services/Navigation';
 
 const PetItem = props => {
     return (
         <TouchableWithoutFeedback
-            onPress={() => foundPetsNavigate('FoundPet', {
+            onPress={() => mainStackNavigate('FoundPet', {
                 image: props.image,
                 location: {
                     latitude: props.latitude,

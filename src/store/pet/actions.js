@@ -3,8 +3,8 @@ import {
     POST_FOUND_PET,
     FETCH_PETS,
     SET_PETS,
-    FETCH_PET_ADS,
-    SET_PET_ADS,
+    FETCH_LOST_PETS,
+    SET_LOST_PETS,
     ADD_LOST_PET, POST_LOST_PET
 } from "./constants";
 
@@ -27,12 +27,12 @@ export const setPets = items => ({
     items
 });
 
-export const fetchPetAds = () => ({
-    type: FETCH_PET_ADS
+export const fetchLostPets = () => ({
+    type: FETCH_LOST_PETS
 });
 
-export const setPetAds = items => ({
-   type: SET_PET_ADS,
+export const setLostPets = items => ({
+   type: SET_LOST_PETS,
    items
 });
 

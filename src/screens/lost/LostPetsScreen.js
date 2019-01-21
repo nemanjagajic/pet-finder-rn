@@ -1,20 +1,20 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import PetAdList from "../../components/petAd/List";
 import {bindActionCreators} from "redux";
-import {fetchPetAds} from "../../store/pet/actions";
+import {fetchLostPets} from "../../store/pet/actions";
 import FloatingButton from "../../components/UI/FloatingButton";
 
 class FoundPetsScreen extends Component {
     componentDidMount() {
-        this.props.fetchPetAds();
+        this.props.fetchLostPets();
     }
 
     render() {
         return (
             <View style={styles.container}>
-                {console.log(this.props.adItems)}
+                {console.log(this.props.lostPets)}
                 <PetAdList pets={[]} />
                 <FloatingButton
                     onPress={() => this.props.navigation.navigate('AddLostPet')}
@@ -37,14 +37,14 @@ const styles = StyleSheet.create({
 const mapDispatchToProps = dispatch =>
     bindActionCreators(
         {
-            fetchPetAds
+            fetchLostPets
         },
         dispatch
     );
 
 const mapStateToProps = state => ({
     auth: state.auth,
-    adItems: state.pets.adItems
+    lostPets: state.pets.lostPets
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(FoundPetsScreen);
