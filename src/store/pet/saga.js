@@ -78,10 +78,8 @@ export function* postPetAd(action) {
             type: pet.type
         };
 
-        console.log(postRequest);
-
         const response = yield call(petService.postPetAd, postRequest);
-        console.log(response);
+        
         const date = new Date();
         if (response.status === 200) {
             const petToAdd = {
