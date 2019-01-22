@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1904bfd5-aa80-4dcb-9ce7-a1680bde6f9f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/petAd/Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/petAd/Item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/found/FoundPetScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/found/FoundPetScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/adopt/AdoptScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/adopt/AdoptScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/lost/LostPetsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/lost/LostPetsScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/petAd/AddPetAdScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/petAd/AddPetAdScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/petAd/PetAdDetailsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/petAd/PetAdDetailsScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/pet/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/pet/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/pet/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/pet/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/pet/saga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/pet/saga.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,23 +33,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="337" />
+          <entry key="js" value="339" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="337" />
+          <entry key="JavaScript" value="339" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="30" />
-          <entry key="js" value="35477" />
+          <entry key="js" value="35565" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="35477" />
+          <entry key="JavaScript" value="35565" />
           <entry key="PLAIN_TEXT" value="30" />
         </counts>
       </usages-collector>
@@ -61,23 +57,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/screens/lost/LostPetsScreen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="59" column="6" lean-forward="true" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/screens/petAd/AddPetAdScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
+            <state relative-caret-position="495">
+              <caret line="44" column="56" lean-forward="true" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -86,40 +70,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/screens/found/AddFoundPetScreen.js">
+        <entry file="file://$PROJECT_DIR$/src/screens/lost/LostPetsScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2828">
-              <caret line="202" column="9" selection-start-line="202" selection-start-column="9" selection-end-line="202" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/pet/saga.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="94" column="32" selection-start-line="94" selection-start-column="32" selection-end-line="94" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#47#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/pet/actions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/screens/petAd/PetAdDetailsScreen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1950">
-              <caret line="130" column="21" selection-start-line="130" selection-start-column="21" selection-end-line="130" selection-end-column="21" />
+            <state relative-caret-position="291">
+              <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -128,30 +82,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/pet/reducer.js">
+        <entry file="file://$PROJECT_DIR$/src/screens/found/FoundPetsScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/screens/found/FoundPetScreen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="865">
-              <caret line="135" column="26" selection-start-line="135" selection-start-column="26" selection-end-line="135" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/navigation/main/MainStack.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+            <state relative-caret-position="480">
+              <caret line="32" column="37" lean-forward="true" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
               <folding>
-                <element signature="e#0#54#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/screens/adopt/AdoptScreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="87" selection-start-line="28" selection-start-column="87" selection-end-line="28" selection-end-column="87" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -168,9 +116,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Camera</find>
-      <find>AddImage</find>
-      <find>onImageA</find>
       <find>placeholder</find>
       <find>props</find>
       <find>props.auth</find>
@@ -198,6 +143,9 @@
       <find>postLostPet</find>
       <find>console.log</find>
       <find>lost</find>
+      <find>AddPetAd</find>
+      <find>navigate</find>
+      <find>this.props.navigation.navigate</find>
     </findStrings>
     <replaceStrings>
       <replace>FF9800</replace>
@@ -249,7 +197,6 @@
         <option value="$PROJECT_DIR$/src/screens/finder/FoundPetsScreen.js" />
         <option value="$PROJECT_DIR$/src/navigation/main/MainTabNavigation.js" />
         <option value="$PROJECT_DIR$/src/components/pet/ItemAd.js" />
-        <option value="$PROJECT_DIR$/src/screens/found/FoundPetsScreen.js" />
         <option value="$PROJECT_DIR$/src/screens/lost/AddLostPet.js" />
         <option value="$PROJECT_DIR$/src/screens/found/AddFoundPetScreen.js" />
         <option value="$PROJECT_DIR$/src/services/Navigation.js" />
@@ -258,8 +205,6 @@
         <option value="$PROJECT_DIR$/src/screens/lost/LostPetScreen.js" />
         <option value="$PROJECT_DIR$/src/services/api/PetService.js" />
         <option value="$PROJECT_DIR$/src/store/pet/constants.js" />
-        <option value="$PROJECT_DIR$/src/screens/lost/LostPetsScreen.js" />
-        <option value="$PROJECT_DIR$/src/screens/adopt/AdoptScreen.js" />
         <option value="$PROJECT_DIR$/src/store/sagas-index.js" />
         <option value="$PROJECT_DIR$/src/screens/lost/PetAdDetailsScreen.js" />
         <option value="$PROJECT_DIR$/src/screens/PetAdDetailsScreen.js" />
@@ -273,6 +218,9 @@
         <option value="$PROJECT_DIR$/src/store/pet/saga.js" />
         <option value="$PROJECT_DIR$/src/store/pet/actions.js" />
         <option value="$PROJECT_DIR$/src/store/pet/reducer.js" />
+        <option value="$PROJECT_DIR$/src/screens/lost/LostPetsScreen.js" />
+        <option value="$PROJECT_DIR$/src/screens/found/FoundPetsScreen.js" />
+        <option value="$PROJECT_DIR$/src/screens/adopt/AdoptScreen.js" />
         <option value="$PROJECT_DIR$/src/screens/petAd/AddPetAdScreen.js" />
       </list>
     </option>
@@ -368,7 +316,7 @@
               <item name="pet-finder" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
-              <item name="found" type="462c0819:PsiDirectoryNode" />
+              <item name="adopt" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pet-finder" type="b2602c69:ProjectViewProjectNode" />
@@ -460,12 +408,12 @@
       <workItem from="1547576491858" duration="3544000" />
       <workItem from="1547630128773" duration="138000" />
       <workItem from="1547919135251" duration="4917000" />
-      <workItem from="1548103053751" duration="8076000" />
+      <workItem from="1548103053751" duration="8506000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155503000" />
+    <option name="totallyTimeSpent" value="155933000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -696,27 +644,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/found/FoundPetsScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="44" lean-forward="true" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/pet/constants.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/adopt/AdoptScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -736,16 +667,6 @@
           <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/lost/LostPetsScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" column="6" lean-forward="true" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -825,10 +746,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/lost/LostPetsScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/found/FoundPetsScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="37" lean-forward="true" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/adopt/AdoptScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="87" selection-start-line="28" selection-start-column="87" selection-end-line="28" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/screens/petAd/AddPetAdScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
+        <state relative-caret-position="495">
+          <caret line="44" column="56" lean-forward="true" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

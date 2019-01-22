@@ -42,7 +42,7 @@ class AddPetAdScreen extends Component {
             image,
             description,
             phoneNumber,
-            type: 1
+            type: this.props.navigation.getParam('type')
         };
 
         this.props.postPetAd(pet);
