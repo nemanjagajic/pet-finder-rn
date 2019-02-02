@@ -59,7 +59,7 @@ class PetAdDetailsScreen extends Component {
                         </View>
                     </View>
                     <View style={styles.description}>
-                        <Text style={{color: '#8c8c8c', fontSize: 15}}>{pet.description}</Text>
+                        <Text style={styles.descriptionText}>{pet.description}</Text>
                     </View>
                 </View>
             </ScrollView>
@@ -130,6 +130,10 @@ const styles = StyleSheet.create({
         borderColor: '#ccc',
         minHeight: 80
     },
+    descriptionText: {
+        color: '#8c8c8c',
+        fontSize: 15
+    }
 });
 
 export default PetAdDetailsScreen;

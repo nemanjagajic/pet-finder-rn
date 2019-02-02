@@ -32,7 +32,7 @@ const PetItem = props => {
                         <View style={styles.infoItem}>
                             <Ionicons name='ios-navigate' size={18} color={'#26A69A'}/>
                             <Text style={styles.infoText}>
-                                {`${Platform.OS === 'android' ? props.street + ' ' + props.name : props.name}`}
+                                {props.name}
                             </Text>
                         </View>
                         <View style={styles.infoItem}>
@@ -59,8 +59,7 @@ const PetItem = props => {
                     }
                 </View>
                 <Text style={styles.description}>
-                    {props.description.slice(0, 42)}
-                    {props.description.length > 42 ? '...' : ''}
+                    {props.description}
                 </Text>
             </View>
         </TouchableWithoutFeedback>
@@ -106,8 +105,9 @@ const styles = StyleSheet.create({
         marginRight: 10
     },
     description: {
-        color: '#8c8c8c',
-        flex: 1
+        color: '#999999',
+        flex: 1,
+        maxHeight: 20
     },
     info: {
         flex: 1,
@@ -119,12 +119,14 @@ const styles = StyleSheet.create({
     infoText: {
         color: '#999999',
         marginLeft: 5,
+        marginRight: 5,
         fontSize: 12
     },
     infoItem: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginBottom: 1
+        marginBottom: 1,
+        marginRight: 10
     }
 });
 

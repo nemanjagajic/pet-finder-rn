@@ -51,7 +51,7 @@ class AddPetAdScreen extends Component {
 
     render() {
         return (
-            <KeyboardAvoidingView style={styles.container} behavior='padding'>
+            <KeyboardAvoidingView style={styles.container} behavior='padding' keyboardVerticalOffset={100}>
                 <ScrollView style={{width: '100%'}}>
                     <View style={styles.row}>
                         <View style={styles.centeredContent}>

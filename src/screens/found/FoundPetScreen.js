@@ -48,7 +48,7 @@ class FoundPetScreen extends Component {
                             <View style={styles.infoItem}>
                                 <Ionicons name='ios-navigate' size={18} color={'#26A69A'}/>
                                 <Text style={styles.infoText}>
-                                    {`${Platform.OS === 'android' ? pet.locationInfo.street + ' ' + pet.locationInfo.name : pet.locationInfo.name}`}
+                                    {pet.locationInfo.name}
                                 </Text>
                             </View>
                             <View style={styles.infoItem}>
@@ -74,7 +74,7 @@ class FoundPetScreen extends Component {
                         </View>
                     </View>
                     <View style={styles.description}>
-                        <Text style={{color: '#8c8c8c', fontSize: 15}}>{pet.description}</Text>
+                        <Text style={styles.descriptionText}>{pet.description}</Text>
                     </View>
                 </View>
             </ScrollView>
@@ -135,6 +135,10 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#ccc'
     },
+    descriptionText: {
+        color: '#8c8c8c',
+        fontSize: 15
+    }
 });
 
 export default FoundPetScreen;

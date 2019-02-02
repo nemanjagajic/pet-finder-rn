@@ -90,7 +90,7 @@ class AddFoundPetScreen extends Component {
 
     render() {
         return (
-            <KeyboardAvoidingView style={styles.container} behavior='padding'>
+            <KeyboardAvoidingView style={styles.container} behavior='padding' keyboardVerticalOffset={100}>
                 <ScrollView style={{width: '100%'}}>
                     <View style={styles.row}>
                         <View style={styles.centeredContent}>
@@ -187,7 +187,6 @@ const styles = StyleSheet.create({
         width: '100%',
         padding: 5,
         paddingLeft: 10,
-        color: '#fff',
         borderWidth: 1,
         borderRadius: 10,
         borderColor: '#ccc',

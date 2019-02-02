@@ -49,8 +49,7 @@ const PetAdItem = props => {
                     }
                 </View>
                 <Text style={styles.description}>
-                    {props.description.slice(0, 42)}
-                    {props.description.length > 42 ? '...' : ''}
+                    {props.description}
                 </Text>
             </View>
         </TouchableWithoutFeedback>
@@ -96,8 +95,9 @@ const styles = StyleSheet.create({
         marginRight: 10
     },
     description: {
-        color: '#8c8c8c',
-        flex: 1
+        color: '#999999',
+        flex: 1,
+        maxHeight: 20
     },
     info: {
         flex: 1,
@@ -109,6 +109,7 @@ const styles = StyleSheet.create({
     infoText: {
         color: '#999999',
         marginLeft: 5,
+        marginRight: 5,
         fontSize: 12
     },
     infoItem: {
