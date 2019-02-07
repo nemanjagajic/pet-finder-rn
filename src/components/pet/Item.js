@@ -32,7 +32,7 @@ const PetItem = props => {
                         <View style={styles.infoItem}>
                             <Ionicons name='ios-navigate' size={18} color={'#26A69A'}/>
                             <Text style={styles.infoText}>
-                                {props.name}
+                                {`${props.street} ${props.name}`}
                             </Text>
                         </View>
                         <View style={styles.infoItem}>

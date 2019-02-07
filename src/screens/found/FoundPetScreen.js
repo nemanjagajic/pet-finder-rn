@@ -28,6 +28,7 @@ class FoundPetScreen extends Component {
 
     render() {
         const pet = this.props.navigation.state.params;
+        {console.log(pet)}
 
         return (
             <ScrollView contentContainerStyle={styles.container}>
@@ -48,7 +49,7 @@ class FoundPetScreen extends Component {
                             <View style={styles.infoItem}>
                                 <Ionicons name='ios-navigate' size={18} color={'#26A69A'}/>
                                 <Text style={styles.infoText}>
-                                    {pet.locationInfo.name}
+                                    {`${pet.locationInfo.street} ${pet.locationInfo.name}`}
                                 </Text>
                             </View>
                             <View style={styles.infoItem}>
