@@ -13,7 +13,25 @@ class PetService {
     };
 
     postPet = pet => {
-        return axios.post(POST_PET, pet);
+        let formData = new FormData();
+
+        if (pet.image) {
+            let uri = pet.image.uri;
+            let name = uri.split('/').pop();
+            let type = 'image/jpg';
+            formData.append('image', { uri, name, type });
+        }
+
+        formData.append('city', pet.city);
+        formData.append('country', pet.country);
+        formData.append('description', pet.description);
+        formData.append('latitude', pet.latitude);
+        formData.append('longitude', pet.longitude);
+        formData.append('name', pet.name);
+        formData.append('street', pet.street);
+        formData.append('userId', pet.userId);
+
+        return axios.post(POST_PET, formData);
     };
 
     fetchLostPets = () => {
@@ -25,7 +43,22 @@ class PetService {
     };
 
     postPetAd = petAd => {
-        return axios.post(POST_PET_AD, petAd);
+        let formData = new FormData();
+
+        if (petAd.image) {
+            let uri = petAd.image.uri;
+            let name = uri.split('/').pop();
+            let type = 'image/jpg';
+            formData.append('image', { uri, name, type });
+        }
+
+        formData.append('description', petAd.description);
+        formData.append('locationInfo', petAd.locationInfo);
+        formData.append('phoneNumber', petAd.phoneNumber);
+        formData.append('type', petAd.type);
+        formData.append('userId', petAd.userId);
+
+        return axios.post(POST_PET_AD, formData);
     };
 }
 

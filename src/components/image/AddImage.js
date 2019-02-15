@@ -21,7 +21,7 @@ class AddImage extends Component {
         });
 
         if (!result.cancelled) {
-            this.setState({image: result.uri});
+            this.setState({image: result});
         }
 
         this.props.onImageAdded(this.state.image);
@@ -34,7 +34,7 @@ class AddImage extends Component {
         });
 
         if (!result.cancelled) {
-            this.setState({image: result.uri});
+            this.setState({image: result});
         }
 
         this.props.onImageAdded(this.state.image);
@@ -51,7 +51,7 @@ class AddImage extends Component {
                             ?
                             <Ionicons name={'md-images'} color={'white'} size={50}/>
                             :
-                            <Image source={{uri: image}} style={styles.image}/>
+                            <Image source={{uri: image.uri}} style={styles.image}/>
                     }
                 </View>
                 <View style={styles.buttonWrapper}>

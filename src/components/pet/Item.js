@@ -51,7 +51,7 @@ const PetItem = props => {
                     {
                         props.image
                             ?
-                            <Image source={{uri: props.image}} style={styles.image}/>
+                            <Image source={{uri: props.image.uri}} style={styles.image}/>
                             :
                             <View style={styles.imagePlaceholder}>
                                 <Ionicons name='md-images' color={'white'} size={40}/>

@@ -11,7 +11,7 @@ const ShowImage = props => {
                         ?
                         <Ionicons name={'md-images'} color={'white'} size={50}/>
                         :
-                        <Image source={{uri: props.image}} style={styles.image}/>
+                        <Image source={{uri: props.image.uri}} style={styles.image}/>
                 }
             </View>
         </View>

@@ -28,7 +28,6 @@ class FoundPetScreen extends Component {
 
     render() {
         const pet = this.props.navigation.state.params;
-        {console.log(pet)}
 
         return (
             <ScrollView contentContainerStyle={styles.container}>
