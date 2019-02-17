@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, Image, Platform, TouchableWithoutFeedback} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
+import {BASE} from "../../services/api/constants";
 
 import {mainStackNavigate} from '../../services/Navigation';
 
@@ -51,7 +52,10 @@ const PetItem = props => {
                     {
                         props.image
                             ?
-                            <Image source={{uri: props.image.uri}} style={styles.image}/>
+                            <Image
+                                source={{uri: `${BASE}/storage/images/${props.image}`}}
+                                style={styles.image}
+                            />
                             :
                             <View style={styles.imagePlaceholder}>
                                 <Ionicons name='md-images' color={'white'} size={40}/>

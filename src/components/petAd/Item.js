@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet, Image, TouchableWithoutFeedback, Platform} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import {mainStackNavigate} from "../../services/Navigation";
+import {BASE} from "../../services/api/constants";
 
 const PetAdItem = props => {
     return (
@@ -41,7 +42,10 @@ const PetAdItem = props => {
                     {
                         props.image
                             ?
-                            <Image source={{uri: props.image.uri}} style={styles.image}/>
+                            <Image
+                                source={{uri: `${BASE}/storage/images/${props.image}`}}
+                                style={styles.image}
+                            />
                             :
                             <View style={styles.imagePlaceholder}>
                                 <Ionicons name='md-images' color={'white'} size={40}/>

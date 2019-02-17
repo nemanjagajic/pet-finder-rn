@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, Image} from "react-native";
 import {Ionicons} from '@expo/vector-icons';
+import {BASE} from "../../services/api/constants";
 
 const ShowImage = props => {
     return (
@@ -11,7 +12,10 @@ const ShowImage = props => {
                         ?
                         <Ionicons name={'md-images'} color={'white'} size={50}/>
                         :
-                        <Image source={{uri: props.image.uri}} style={styles.image}/>
+                        <Image
+                            source={{uri: `${BASE}/storage/images/${props.image}`}}
+                            style={styles.image}
+                        />
                 }
             </View>
         </View>
