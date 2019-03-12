@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {View, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet, Text, ActivityIndicator} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 
 import FloatingButton from "../../components/UI/FloatingButton";
@@ -19,7 +19,8 @@ class FoundPetsScreen extends Component {
         return (
             <View style={styles.container}>
                 {
-                    this.props.pets.items.length > 0
+                    !this.props.pets.isFetchingPets && (
+                        this.props.pets.items.length > 0
                         ?
                         <PetList pets={this.props.pets.items}/>
                         :
@@ -27,6 +28,14 @@ class FoundPetsScreen extends Component {
                             <Ionicons name={'md-paw'} color={'#bfbfbf'} size={40}/>
                             <Text style={styles.emptyListText}>No pets added yet</Text>
                         </View>
+                    )
+                }
+                {
+                    this.props.pets.isFetchingPets && <ActivityIndicator
+                        style={styles.containerCenter}
+                        size='large'
+                        color='#009688'
+                    />
                 }
                 <FloatingButton
                     onPress={() => this.props.navigation.navigate('AddPet')}

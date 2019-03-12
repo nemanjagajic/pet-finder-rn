@@ -1,12 +1,22 @@
 import { call, put } from 'redux-saga/effects';
 import petService from '../../services/api/PetService';
-import {setPets, addFoundPet, setLostPets, addLostPet, setAdoptingPets, addAdoptingPet} from './actions'
+import {
+    setPets,
+    addFoundPet,
+    setLostPets,
+    addLostPet,
+    setAdoptingPets,
+    addAdoptingPet,
+    setFetchingPets, setFetchingLostPets, setFetchingAdoptingPets
+} from './actions'
 
 export function* fetchPets() {
     try {
+        yield put(setFetchingPets(true));
         const response = yield call(petService.fetchPets);
         if (response.status === 200) {
             yield put(setPets(response.data));
+            yield put(setFetchingPets(false));
         }
     } catch (error) {
         console.log(error);
@@ -41,9 +51,11 @@ export function* postFoundPet(action) {
 
 export function* fetchLostPets() {
     try {
+        yield put(setFetchingLostPets(true));
         const response = yield call(petService.fetchLostPets);
         if (response.status === 200) {
             yield put(setLostPets(response.data));
+            yield put(setFetchingLostPets(false));
         }
     } catch (error) {
         console.log(error);
@@ -52,9 +64,11 @@ export function* fetchLostPets() {
 
 export function* fetchAdoptingPets() {
     try {
+        yield put(setFetchingAdoptingPets(true));
         const response = yield call(petService.fetchAdoptingPets);
         if (response.status === 200) {
             yield put(setAdoptingPets(response.data));
+            yield put(setFetchingAdoptingPets(false));
         }
     } catch (error) {
         console.log(error);

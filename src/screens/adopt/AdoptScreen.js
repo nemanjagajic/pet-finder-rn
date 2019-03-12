@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {View, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet, Text, ActivityIndicator} from 'react-native';
 import PetAdList from "../../components/petAd/List";
 import {bindActionCreators} from "redux";
 import {fetchAdoptingPets} from "../../store/pet/actions";
@@ -16,14 +16,23 @@ class AdoptScreen extends Component {
         return (
             <View style={styles.container}>
                 {
-                    this.props.adoptingPets.length > 0
+                    !this.props.pets.isFetchingAdoptingPets && (
+                        this.props.pets.adoptingPets.length > 0
                         ?
-                        <PetAdList pets={this.props.adoptingPets} />
+                        <PetAdList pets={this.props.pets.adoptingPets} />
                         :
                         <View style={styles.containerCenter}>
                             <Ionicons name={'md-paw'} color={'#bfbfbf'} size={40}/>
                             <Text style={styles.emptyListText}>No pets added yet</Text>
                         </View>
+                    )
+                }
+                {
+                    this.props.pets.isFetchingAdoptingPets && <ActivityIndicator
+                        style={styles.containerCenter}
+                        size='large'
+                        color='#009688'
+                    />
                 }
                 <FloatingButton
                     onPress={() => this.props.navigation.navigate('AddPetAd', {type: 2})}
@@ -61,7 +70,7 @@ const mapDispatchToProps = dispatch =>
 
 const mapStateToProps = state => ({
     auth: state.auth,
-    adoptingPets: state.pets.adoptingPets
+    pets: state.pets
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AdoptScreen);

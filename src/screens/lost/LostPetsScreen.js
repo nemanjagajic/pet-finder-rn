@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {View, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet, Text, ActivityIndicator} from 'react-native';
 import PetAdList from "../../components/petAd/List";
 import {bindActionCreators} from "redux";
 import {fetchLostPets} from "../../store/pet/actions";
@@ -15,15 +15,25 @@ class FoundPetsScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
+                {console.log(this.props.pets.lostPets)}
                 {
-                    this.props.lostPets.length > 0
+                    !this.props.pets.isFetchingLostPets && (
+                        this.props.pets.lostPets.length > 0
                         ?
-                        <PetAdList pets={this.props.lostPets} />
+                        <PetAdList pets={this.props.pets.lostPets} />
                         :
                         <View style={styles.containerCenter}>
                             <Ionicons name={'md-paw'} color={'#bfbfbf'} size={40}/>
                             <Text style={styles.emptyListText}>No pets added yet</Text>
                         </View>
+                    )
+                }
+                {
+                    this.props.pets.isFetchingLostPets && <ActivityIndicator
+                        style={styles.containerCenter}
+                        size='large'
+                        color='#009688'
+                    />
                 }
                 <FloatingButton
                     onPress={() => this.props.navigation.navigate('AddPetAd', {type: 1})}
@@ -61,7 +71,7 @@ const mapDispatchToProps = dispatch =>
 
 const mapStateToProps = state => ({
     auth: state.auth,
-    lostPets: state.pets.lostPets
+    pets: state.pets,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(FoundPetsScreen);

@@ -9,7 +9,7 @@ import {
     POST_PET_AD,
     FETCH_ADOPTING_PETS,
     SET_ADOPTING_PETS,
-    ADD_ADOPTING_PET
+    ADD_ADOPTING_PET, SET_FETCHING_LOST_PETS, SET_FETCHING_PETS, SET_FETCHING_ADOPTING_PETS
 } from "./constants";
 
 export const addFoundPet = pet => ({
@@ -31,6 +31,11 @@ export const setPets = items => ({
     items
 });
 
+export const setFetchingPets = isFetching => ({
+    type: SET_FETCHING_PETS,
+    isFetching
+});
+
 export const fetchLostPets = () => ({
     type: FETCH_LOST_PETS
 });
@@ -38,6 +43,11 @@ export const fetchLostPets = () => ({
 export const setLostPets = items => ({
    type: SET_LOST_PETS,
    items
+});
+
+export const setFetchingLostPets = isFetching => ({
+    type: SET_FETCHING_LOST_PETS,
+    isFetching
 });
 
 export const addLostPet = pet => ({
@@ -52,6 +62,11 @@ export const postPetAd = pet => ({
 
 export const fetchAdoptingPets = () => ({
     type: FETCH_ADOPTING_PETS
+});
+
+export const setFetchingAdoptingPets = isFetching => ({
+    type: SET_FETCHING_ADOPTING_PETS,
+    isFetching
 });
 
 export const setAdoptingPets = items => ({

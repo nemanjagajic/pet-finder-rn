@@ -6,9 +6,10 @@ import {BASE} from "../../services/api/constants";
 const ShowImage = props => {
     return (
         <View style={styles.container}>
+            {console.log(props)}
             <View style={styles.imagePlaceholder}>
                 {
-                    props.image === null
+                    props.image === null || props.image === ''
                         ?
                         <Ionicons name={'md-images'} color={'white'} size={50}/>
                         :
