@@ -15,7 +15,6 @@ class FoundPetsScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
-                {console.log(this.props.pets.lostPets)}
                 {
                     !this.props.pets.isFetchingLostPets && (
                         this.props.pets.lostPets.length > 0
