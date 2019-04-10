@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { MapView } from 'expo';
-// import { Marker } from 'react-native-maps';
 import ButtonCustom from "../UI/ButtonCustom";
 
 class PickLocation extends Component {

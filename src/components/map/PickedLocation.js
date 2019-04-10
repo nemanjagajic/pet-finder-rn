@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { MapView } from 'expo';
-// import { Marker } from 'react-native-maps';
 
 const PickedLocation = props => (
   <MapView
