@@ -9,7 +9,12 @@ import {
   POST_PET_AD,
   FETCH_ADOPTING_PETS,
   SET_ADOPTING_PETS,
-  ADD_ADOPTING_PET, SET_FETCHING_LOST_PETS, SET_FETCHING_PETS, SET_FETCHING_ADOPTING_PETS,
+  ADD_ADOPTING_PET,
+  SET_FETCHING_LOST_PETS,
+  SET_FETCHING_PETS,
+  SET_FETCHING_ADOPTING_PETS,
+  FETCH_PET_COMMENTS,
+  FETCH_PET_AD_COMMENTS, SET_COMMENTS,
 } from './constants';
 
 export const addFoundPet = pet => ({
@@ -77,4 +82,19 @@ export const setAdoptingPets = items => ({
 export const addAdoptingPet = pet => ({
   type: ADD_ADOPTING_PET,
   pet,
+});
+
+export const fetchPetComments = petId => ({
+  type: FETCH_PET_COMMENTS,
+  petId
+});
+
+export const fetchPetAdComments = petId => ({
+  type: FETCH_PET_AD_COMMENTS,
+  petId
+});
+
+export const setComments = comments => ({
+  type: SET_COMMENTS,
+  comments
 });

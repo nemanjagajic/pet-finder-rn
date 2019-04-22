@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text, ScrollView } from 'react-native';
+import { connect } from 'react-redux';
+import { View, StyleSheet, Text, ScrollView, TouchableOpacity } from 'react-native';
 
 import PickedLocation from "../../components/map/PickedLocation";
 import ShowImage from "../../components/image/ShowImage";
 import { Ionicons } from '@expo/vector-icons';
 import userService from '../../services/api/UserService';
+import { bindActionCreators } from "redux";
+import { fetchPetComments } from "../../store/pet/actions";
 
 class FoundPetScreen extends Component {
   state = {
@@ -24,6 +27,10 @@ class FoundPetScreen extends Component {
       });
     }, 250);
   }
+
+  openComments = petId => {
+    this.props.fetchPetComments(petId);
+  };
 
   render() {
     const pet = this.props.navigation.state.params;
@@ -75,6 +82,12 @@ class FoundPetScreen extends Component {
           <View style={styles.description}>
             <Text style={styles.descriptionText}>{pet.description}</Text>
           </View>
+          <TouchableOpacity
+            style={styles.commentsButton}
+            onPress={() => this.openComments(pet.id)}
+          >
+            <Text style={styles.commentsText}>Comments (4)</Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     );
@@ -85,7 +98,7 @@ const styles = StyleSheet.create({
   container: {
     minHeight: '100%',
     backgroundColor: '#fff',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   row: {
     width: '80%'
@@ -127,17 +140,41 @@ const styles = StyleSheet.create({
   description: {
     padding: 10,
     marginTop: 10,
-    marginBottom: 20,
+    marginBottom: 10,
     width: '100%',
-    backgroundColor: '#f2f2f2',
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: '#ccc'
+    borderColor: '#ccc',
+    minHeight: 80
   },
   descriptionText: {
     color: '#8c8c8c',
     fontSize: 15
+  },
+  commentsButton: {
+    width: '100%',
+    height: 40,
+    marginBottom: 30,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#ccc',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#f2f2f2'
+  },
+  commentsText: {
+    color: '#8c8c8c',
+    fontSize: 14,
+    textAlign: 'center'
   }
 });
 
-export default FoundPetScreen;
+const mapDispatchToProps = dispatch => bindActionCreators(
+  {
+    fetchPetComments
+  },
+  dispatch,
+);
+
+export default connect(null, mapDispatchToProps)(FoundPetScreen);

@@ -2,6 +2,7 @@ import axios from 'axios';
 import { BASE } from "./constants";
 
 const FETCH_PETS = `${BASE}/api/pets`;
+const FETCH_PET_ADS = `${BASE}/api/petAds`;
 const POST_PET = `${BASE}/api/pets`;
 const FETCH_LOST_PETS = `${BASE}/api/lostPets`;
 const FETCH_ADOPTING_PETS = `${BASE}/api/adoptingPets`;
@@ -59,6 +60,14 @@ class PetService {
     formData.append('userId', petAd.userId);
 
     return axios.post(POST_PET_AD, formData);
+  };
+
+  fetchPetComments = petId => {
+    return axios.get(`${FETCH_PETS}/${petId}/comments`);
+  };
+
+  fetchPetAdComments = petAdId => {
+    return axios.get(`${FETCH_PET_ADS}/${petAdId}/comments`);
   };
 }
 

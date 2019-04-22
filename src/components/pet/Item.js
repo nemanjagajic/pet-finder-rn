@@ -10,6 +10,7 @@ import { mainStackNavigate } from '../../services/Navigation';
 const PetItem = props => (
   <TouchableWithoutFeedback
     onPress={() => mainStackNavigate('FoundPet', {
+      id: props.id,
       image: props.image,
       location: {
         latitude: props.latitude,
