@@ -115,7 +115,6 @@ export function* fetchPetComments(action) {
 export function* fetchPetAdComments(action) {
   try {
     const response = yield call(petService.fetchPetAdComments, action.petId);
-    console.log(response.data);
   } catch (error) {
     console.log(error);
   }

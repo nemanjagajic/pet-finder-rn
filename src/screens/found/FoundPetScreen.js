@@ -85,7 +85,9 @@ class FoundPetScreen extends Component {
             style={styles.commentsButton}
             onPress={() => this.openComments(pet.id)}
           >
-            <Text style={styles.commentsText}>Comments (4)</Text>
+            <Text style={styles.commentsText}>
+              Open Comments <Ionicons name="ios-arrow-forward" color="#26A69A" size={12} />
+            </Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
@@ -165,7 +167,7 @@ const styles = StyleSheet.create({
   commentsText: {
     color: '#8c8c8c',
     fontSize: 14,
-    textAlign: 'center'
+    textAlign: 'center',
   }
 });
 
