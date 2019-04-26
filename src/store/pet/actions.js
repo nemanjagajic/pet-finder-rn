@@ -93,8 +93,3 @@ export const fetchPetAdComments = petId => ({
   type: FETCH_PET_AD_COMMENTS,
   petId
 });
-
-export const setComments = comments => ({
-  type: SET_COMMENTS,
-  comments
-});

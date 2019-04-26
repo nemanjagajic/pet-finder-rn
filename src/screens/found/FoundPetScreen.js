@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { View, StyleSheet, Text, ScrollView, TouchableOpacity } from 'react-native';
 
 import PickedLocation from "../../components/map/PickedLocation";
 import ShowImage from "../../components/image/ShowImage";
 import { Ionicons } from '@expo/vector-icons';
 import userService from '../../services/api/UserService';
-import { bindActionCreators } from "redux";
-import { fetchPetComments } from "../../store/pet/actions";
 
 class FoundPetScreen extends Component {
   state = {
@@ -29,7 +26,9 @@ class FoundPetScreen extends Component {
   }
 
   openComments = petId => {
-    this.props.fetchPetComments(petId);
+    this.props.navigation.navigate('Comments', {
+      petId
+    });
   };
 
   render() {
@@ -170,11 +169,4 @@ const styles = StyleSheet.create({
   }
 });
 
-const mapDispatchToProps = dispatch => bindActionCreators(
-  {
-    fetchPetComments
-  },
-  dispatch,
-);
-
-export default connect(null, mapDispatchToProps)(FoundPetScreen);
+export default FoundPetScreen;

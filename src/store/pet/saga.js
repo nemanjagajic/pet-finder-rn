@@ -7,6 +7,7 @@ import {
   setAdoptingPets,
   setFetchingPets, setFetchingLostPets, setFetchingAdoptingPets,
 } from './actions';
+import {setComments, setIsFetchingComments} from "../comments/actions";
 
 export function* fetchPets() {
   try {
@@ -102,8 +103,10 @@ export function* postPetAd(action) {
 
 export function* fetchPetComments(action) {
   try {
+    yield put(setIsFetchingComments(true));
     const response = yield call(petService.fetchPetComments, action.petId);
-    console.log(response.data);
+    yield put(setComments(response.data));
+    yield put(setIsFetchingComments(false));
   } catch (error) {
     console.log(error);
   }

@@ -4,6 +4,7 @@ import AddLostPetScreen from '../../screens/petAd/AddPetAdScreen';
 import FoundPetScreen from '../../screens/found/FoundPetScreen';
 import MainTabNavigation from './MainTabNavigation';
 import PetAdDetailsScreen from '../../screens/petAd/PetAdDetailsScreen';
+import CommentsScreen from "../../screens/comments/CommentsScreen";
 
 const MainStack = createStackNavigator(
   {
@@ -57,6 +58,16 @@ const MainStack = createStackNavigator(
         headerTintColor: '#fff',
       },
     },
+    Comments: {
+      screen: CommentsScreen,
+      navigationOptions: {
+        title: 'Comments',
+        headerStyle: {
+          backgroundColor: '#009688',
+        },
+        headerTintColor: '#fff',
+      },
+    }
   },
   {
     initialRoute: MainTabNavigation,
