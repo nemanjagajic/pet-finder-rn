@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1904bfd5-aa80-4dcb-9ce7-a1680bde6f9f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/comments/CommentInput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/api/CommentService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/comments/saga.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/comments/Comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/comments/Comment.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/comments/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/comments/List.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/comments/CommentsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/comments/CommentsScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/found/FoundPetScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/found/FoundPetScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/api/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/comments/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/comments/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/comments/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/comments/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/sagas-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/sagas-index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -103,14 +92,14 @@
         <counts>
           <entry key="dummy" value="4" />
           <entry key="gitignore" value="4" />
-          <entry key="js" value="6587" />
+          <entry key="js" value="6654" />
           <entry key="json" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="4" />
-          <entry key="JavaScript" value="6587" />
+          <entry key="JavaScript" value="6654" />
           <entry key="PLAIN_TEXT" value="8" />
         </counts>
       </usages-collector>
@@ -121,8 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/screens/comments/CommentsScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="40" column="46" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+            <state relative-caret-position="426">
+              <caret line="55" column="3" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -130,11 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/comments/List.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -193,10 +182,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/comments/CommentInput.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
+            <state relative-caret-position="374">
               <caret line="36" column="79" selection-start-line="36" selection-start-column="79" selection-end-line="36" selection-end-column="79" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -328,9 +317,9 @@
         <option value="$PROJECT_DIR$/src/store/comments/saga.js" />
         <option value="$PROJECT_DIR$/src/store/comments/actions.js" />
         <option value="$PROJECT_DIR$/src/store/comments/constants.js" />
+        <option value="$PROJECT_DIR$/src/components/comments/CommentInput.js" />
         <option value="$PROJECT_DIR$/src/screens/comments/CommentsScreen.js" />
         <option value="$PROJECT_DIR$/src/components/comments/List.js" />
-        <option value="$PROJECT_DIR$/src/components/comments/CommentInput.js" />
       </list>
     </option>
   </component>
@@ -519,12 +508,12 @@
       <workItem from="1556043405039" duration="221000" />
       <workItem from="1556093994022" duration="196000" />
       <workItem from="1556295474374" duration="8467000" />
-      <workItem from="1556381052935" duration="6834000" />
+      <workItem from="1556381052935" duration="7286000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200302000" />
+    <option name="totallyTimeSpent" value="200754000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
@@ -894,32 +883,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/comments/CommentsScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="40" column="46" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/comments/saga.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding>
             <element signature="e#32#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/comments/List.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -936,10 +905,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/comments/CommentInput.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
+        <state relative-caret-position="374">
           <caret line="36" column="79" selection-start-line="36" selection-start-column="79" selection-end-line="36" selection-end-column="79" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/comments/CommentsScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="55" column="3" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/comments/List.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
