@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {ActivityIndicator, StyleSheet, Text, View} from 'react-native';
+import {ActivityIndicator, Dimensions, StyleSheet, Text, View} from 'react-native';
 import {bindActionCreators} from "redux";
 import {fetchPetComments} from "../../store/pet/actions";
 import { Ionicons } from '@expo/vector-icons';
 import CommentsList from "../../components/comments/List";
+import CommentInput from "../../components/comments/CommentInput";
 
 class CommentsScreen extends Component {
   componentDidMount() {
@@ -17,7 +18,12 @@ class CommentsScreen extends Component {
         {
           !this.props.isFetching && (
             this.props.comments.length > 0
-              ? <CommentsList comments={this.props.comments} />
+              ?
+              <CommentsList
+                comments={this.props.comments}
+                petId={this.props.navigation.getParam('petId')}
+                isPetAd={this.props.navigation.getParam('isPetAd')}
+              />
               : (
                 <View style={styles.containerCenter}>
                   <Ionicons name="ios-chatbubbles" color="#bfbfbf" size={40} />
@@ -28,11 +34,17 @@ class CommentsScreen extends Component {
         }
         {
           this.props.isFetching && (
-            <ActivityIndicator
-              style={styles.containerCenter}
-              size="large"
-              color="#009688"
-            />
+            <View style={{
+              width: Dimensions.get('window').width,
+              height: Dimensions.get('window').height
+            }}>
+              <CommentInput disabled={true} />
+              <ActivityIndicator
+                style={styles.containerCenter}
+                size="large"
+                color="#009688"
+              />
+            </View>
           )
         }
       </View>

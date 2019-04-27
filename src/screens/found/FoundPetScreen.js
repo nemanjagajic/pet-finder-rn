@@ -27,7 +27,8 @@ class FoundPetScreen extends Component {
 
   openComments = petId => {
     this.props.navigation.navigate('Comments', {
-      petId
+      petId,
+      isPetAd: false
     });
   };
 

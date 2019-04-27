@@ -42,7 +42,8 @@ const styles = StyleSheet.create({
     padding: 15
   },
   user: {
-    color: '#26A69A'
+    color: '#a6a6a6',
+    fontStyle: 'italic'
   }
 });
 
