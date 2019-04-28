@@ -1,26 +1,14 @@
 import React from 'react';
 import { StyleSheet, View, Dimensions, Text } from 'react-native';
-import userService from "../../services/api/UserService";
 
 class Comment extends React.Component {
-  state = {
-    user: null
-  };
-
-  async componentDidMount() {
-    const response = await userService.getById(this.props.item.user_id);
-    this.setState({
-      user: response.data[0]
-    });
-  }
-
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.content}>
-          {this.props.item.content}
-          <Text style={styles.user}> - {this.state.user && this.state.user.username}</Text>
-        </Text>
+        <View style={styles.content}>
+          <Text style={styles.user}>{this.props.item.fullName}{'\n'}</Text>
+          <Text style={{color: '#666666'}}>{this.props.item.content}</Text>
+        </View>
       </View>
     );
   }
@@ -42,8 +30,7 @@ const styles = StyleSheet.create({
     padding: 15
   },
   user: {
-    color: '#a6a6a6',
-    fontStyle: 'italic'
+    color: '#26A69A'
   }
 });
 

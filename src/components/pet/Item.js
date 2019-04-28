@@ -27,6 +27,7 @@ const PetItem = props => (
       userId: props.userId,
       description: props.description,
       createdAt: props.created_at,
+      fullName: props.fullName
     })}
   >
     <View style={styles.container}>
