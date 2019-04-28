@@ -9,6 +9,7 @@ import { BASE } from '../../services/api/constants';
 const PetAdItem = props => (
   <TouchableWithoutFeedback
     onPress={() => mainStackNavigate('PetAdDetails', {
+      id: props.id,
       userId: props.userId,
       image: props.image,
       locationInfo: props.locationInfo,
@@ -16,6 +17,7 @@ const PetAdItem = props => (
       description: props.description,
       createdAt: props.created_at,
       type: props.type,
+      fullName: props.fullName
     })}
   >
     <View style={styles.container}>

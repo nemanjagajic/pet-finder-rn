@@ -3,19 +3,14 @@ import {View, StyleSheet, Text, ScrollView, TouchableOpacity} from 'react-native
 
 import ShowImage from "../../components/image/ShowImage";
 import { Ionicons } from '@expo/vector-icons';
-import userService from '../../services/api/UserService';
 
 class PetAdDetailsScreen extends Component {
-  state = {
-    user: null
-  };
-
-  async componentDidMount() {
-    const response = await userService.getById(this.props.navigation.state.params.userId);
-    this.setState({
-      user: response.data[0]
+  openComments = petId => {
+    this.props.navigation.navigate('Comments', {
+      petId,
+      isPetAd: true
     });
-  }
+  };
 
   render() {
     const pet = this.props.navigation.state.params;
@@ -56,7 +51,7 @@ class PetAdDetailsScreen extends Component {
               <View style={styles.infoItem}>
                 <Ionicons name='md-contact' size={18} color={'#26A69A'}/>
                 <Text style={styles.infoText}>
-                  {this.state.user && this.state.user.username}
+                  {pet.fullName}
                 </Text>
               </View>
             </View>
@@ -64,8 +59,13 @@ class PetAdDetailsScreen extends Component {
           <View style={styles.description}>
             <Text style={styles.descriptionText}>{pet.description}</Text>
           </View>
-          <TouchableOpacity style={styles.commentsButton}>
-            <Text style={styles.commentsText}>Comments (4)</Text>
+          <TouchableOpacity
+            style={styles.commentsButton}
+            onPress={() => this.openComments(pet.id)}
+          >
+            <Text style={styles.commentsText}>
+              Open Comments <Ionicons name="ios-arrow-forward" color="#26A69A" size={12} />
+            </Text>
           </TouchableOpacity>
         </View>
       </ScrollView>

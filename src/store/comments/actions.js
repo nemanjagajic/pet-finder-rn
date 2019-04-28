@@ -1,4 +1,4 @@
-import {ADD_PET_COMMENT, POST_PET_COMMENT, SET_COMMENTS, SET_IS_FETCHING_COMMENTS} from "./constants";
+import {POST_PET_COMMENT, SET_COMMENTS, SET_IS_FETCHING_COMMENTS, POST_PET_AD_COMMENT} from "./constants";
 
 export const setIsFetchingComments = isFetching => ({
   type: SET_IS_FETCHING_COMMENTS,
@@ -12,5 +12,10 @@ export const setComments = comments => ({
 
 export const postPetComment = comment => ({
   type: POST_PET_COMMENT,
+  comment
+});
+
+export const postPetAdComment = comment => ({
+  type: POST_PET_AD_COMMENT,
   comment
 });

@@ -6,6 +6,11 @@ import { Ionicons } from '@expo/vector-icons';
 
 const CommentsList = props => (
   <View>
+    <CommentInput
+      petId={props.petId}
+      isPetAd={props.isPetAd}
+      disabled={false}
+    />
     {props.comments.length > 0 ? (
       <FlatList
         contentContainerStyle={styles.container}
@@ -19,18 +24,13 @@ const CommentsList = props => (
         <Text style={styles.emptyListText}>No comments added yet</Text>
       </View>
     )}
-    <CommentInput
-      petId={props.petId}
-      isPetAd={props.isPetAd}
-      disabled={false}
-    />
   </View>
 );
 
 const styles = StyleSheet.create({
   container: {
     width: Dimensions.get('window').width,
-    paddingTop: 160,
+    paddingTop: 10,
     paddingBottom: 15,
     alignItems: 'center'
   },

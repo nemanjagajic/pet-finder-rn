@@ -2,13 +2,17 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {ActivityIndicator, Dimensions, StyleSheet, View} from 'react-native';
 import {bindActionCreators} from "redux";
-import {fetchPetComments} from "../../store/pet/actions";
+import {fetchPetComments, fetchPetAdComments} from "../../store/pet/actions";
 import CommentsList from "../../components/comments/List";
 import CommentInput from "../../components/comments/CommentInput";
 
 class CommentsScreen extends Component {
   componentDidMount() {
-    this.props.fetchPetComments(this.props.navigation.getParam('petId'));
+    if (this.props.navigation.getParam('isPetAd')) {
+      this.props.fetchPetAdComments(this.props.navigation.getParam('petId'));
+    } else {
+      this.props.fetchPetComments(this.props.navigation.getParam('petId'));
+    }
   }
 
   render() {
@@ -31,7 +35,7 @@ class CommentsScreen extends Component {
             }}>
               <CommentInput disabled={true}/>
               <ActivityIndicator
-                style={styles.containerCenter}
+                style={styles.loader}
                 size="large"
                 color="#009688"
               />
@@ -49,10 +53,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#f2f2f2',
   },
-  containerCenter: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+  loader: {
+    marginTop: 20
   }
 });
 
@@ -65,7 +67,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => bindActionCreators(
   {
-    fetchPetComments
+    fetchPetComments,
+    fetchPetAdComments
   },
   dispatch,
 );

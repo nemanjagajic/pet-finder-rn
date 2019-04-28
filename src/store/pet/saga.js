@@ -114,7 +114,10 @@ export function* fetchPetComments(action) {
 
 export function* fetchPetAdComments(action) {
   try {
+    yield put(setIsFetchingComments(true));
     const response = yield call(petService.fetchPetAdComments, action.petId);
+    yield put(setComments(response.data));
+    yield put(setIsFetchingComments(false));
   } catch (error) {
     console.log(error);
   }
