@@ -17,7 +17,6 @@ export function* postPetComment(action) {
 
 export function* postPetAdComment(action) {
   try {
-    console.log(action);
     const response = yield call(commentService.postPetAdComment, action.comment);
     if (response.status === 200) {
       yield put(fetchPetAdComments(action.comment.petAdId));
