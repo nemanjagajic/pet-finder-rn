@@ -18,6 +18,8 @@ const styles = StyleSheet.create({
     right: 'auto',
     justifyContent: 'center',
     alignItems: 'center',
+    marginLeft: 15,
+    alignSelf: 'center'
   },
 });
 

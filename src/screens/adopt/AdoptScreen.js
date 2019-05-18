@@ -46,12 +46,12 @@ class AdoptScreen extends Component {
               />
             )
           }
-          <FloatingButton
-            onPress={() => this.props.navigation.navigate('AddPetAd', { type: 2 })}
-            color="#009688"
-            icon="md-add"
-          />
         </View>
+        <FloatingButton
+          onPress={() => this.props.navigation.navigate('AddPetAd', { type: 2 })}
+          color="#009688"
+          icon="md-add"
+        />
       </View>
     );
   }
