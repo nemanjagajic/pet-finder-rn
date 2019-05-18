@@ -1,7 +1,7 @@
 import {
   ADD_ADOPTING_PET,
   ADD_FOUND_PET,
-  ADD_LOST_PET,
+  ADD_LOST_PET, SET_ADDING_FOUND_PET, SET_ADDING_PET_AD,
   SET_ADOPTING_PETS, SET_FETCHING_ADOPTING_PETS,
   SET_FETCHING_LOST_PETS, SET_FETCHING_PETS,
   SET_LOST_PETS,
@@ -12,6 +12,8 @@ const initialState = {
   items: [],
   lostPets: [],
   adoptingPets: [],
+  isAddingFoundPet: false,
+  isAddingPetAd: false
 };
 
 const petReducer = (state = initialState, action) => {
@@ -60,6 +62,16 @@ const petReducer = (state = initialState, action) => {
     return {
       ...state,
       adoptingPets: state.adoptingPets.concat(action.pet),
+    };
+  case SET_ADDING_FOUND_PET:
+    return {
+      ...state,
+      isAddingFoundPet: action.isAdding
+    };
+  case SET_ADDING_PET_AD:
+    return {
+      ...state,
+      isAddingPetAd: action.isAdding
     };
   default:
     return state;

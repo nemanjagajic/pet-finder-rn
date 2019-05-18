@@ -18,6 +18,16 @@ class FoundPetsScreen extends Component {
     return (
       <View style={styles.list}>
         {
+          this.props.pets.isAddingPetAd &&
+          <View>
+            <Text style={styles.processingText}>Processing post...</Text>
+            <ActivityIndicator
+              size={'small'}
+              color={'#808080'}
+            />
+          </View>
+        }
+        {
           !this.props.pets.isFetchingLostPets && (
             this.props.pets.lostPets.length > 0
               ? <PetAdList
@@ -82,6 +92,12 @@ const styles = StyleSheet.create({
   },
   indicator: {
     marginTop: 50
+  },
+  processingText: {
+    paddingTop: 20,
+    paddingBottom: 5,
+    textAlign: 'center',
+    color: '#808080'
   }
 });
 

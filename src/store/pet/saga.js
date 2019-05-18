@@ -5,7 +5,7 @@ import {
   setPets,
   setLostPets,
   setAdoptingPets,
-  setFetchingPets, setFetchingLostPets, setFetchingAdoptingPets,
+  setFetchingPets, setFetchingLostPets, setFetchingAdoptingPets, setAddingFoundPet, setAddingPetAd,
 } from './actions';
 import {setComments, setIsFetchingComments} from "../comments/actions";
 
@@ -24,6 +24,7 @@ export function* fetchPets() {
 
 export function* postFoundPet(action) {
   try {
+    yield put(setAddingFoundPet(true));
     const { pet } = action;
 
     const postRequest = {
@@ -45,6 +46,8 @@ export function* postFoundPet(action) {
     }
   } catch (error) {
     console.log(error);
+  } finally {
+    yield put(setAddingFoundPet(false));
   }
 }
 
@@ -76,6 +79,7 @@ export function* fetchAdoptingPets() {
 
 export function* postPetAd(action) {
   try {
+    yield put(setAddingPetAd(true));
     const { pet } = action;
 
     const postRequest = {
@@ -98,6 +102,8 @@ export function* postPetAd(action) {
     }
   } catch (error) {
     console.log(error);
+  } finally {
+    yield put(setAddingPetAd(false));
   }
 }
 
