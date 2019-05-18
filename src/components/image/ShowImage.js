@@ -27,8 +27,6 @@ const styles = StyleSheet.create({
   },
   imagePlaceholder: {
     backgroundColor: '#d9d9d9',
-    borderWidth: 1,
-    borderColor: '#ccc',
     borderRadius: 10,
     width: '100%',
     height: 180,
@@ -40,7 +38,7 @@ const styles = StyleSheet.create({
   image: {
     width: '100%',
     borderRadius: 10,
-    height: 178,
+    height: 180,
   },
 });
 

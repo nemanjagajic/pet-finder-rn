@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {
-  View, StyleSheet, Text, ActivityIndicator,
+  View, StyleSheet, Text, ActivityIndicator, TouchableOpacity,
 } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { Ionicons } from '@expo/vector-icons';
@@ -16,33 +16,42 @@ class AdoptScreen extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={styles.list}>
         {
           !this.props.pets.isFetchingAdoptingPets && (
             this.props.pets.adoptingPets.length > 0
-              ? <PetAdList pets={this.props.pets.adoptingPets} />
+              ? <PetAdList
+                pets={this.props.pets.adoptingPets}
+                onRefresh={this.props.fetchAdoptingPets}
+              />
               : (
-                <View style={styles.containerCenter}>
+                <TouchableOpacity
+                  style={styles.containerCenter}
+                  onPress={this.props.fetchAdoptingPets}
+                >
                   <Ionicons name="md-paw" color="#bfbfbf" size={40} />
                   <Text style={styles.emptyListText}>No pets added yet</Text>
-                </View>
+                  <Text style={styles.emptyListTextDesc}>tap paw to refresh</Text>
+                </TouchableOpacity>
               )
           )
         }
-        {
-          this.props.pets.isFetchingAdoptingPets && (
-            <ActivityIndicator
-              style={styles.containerCenter}
-              size="large"
-              color="#009688"
-            />
-          )
-        }
-        <FloatingButton
-          onPress={() => this.props.navigation.navigate('AddPetAd', { type: 2 })}
-          color="#009688"
-          icon="md-add"
-        />
+        <View style={styles.container}>
+          {
+            this.props.pets.isFetchingAdoptingPets && (
+              <ActivityIndicator
+                style={styles.indicator}
+                size="large"
+                color="#009688"
+              />
+            )
+          }
+          <FloatingButton
+            onPress={() => this.props.navigation.navigate('AddPetAd', { type: 2 })}
+            color="#009688"
+            icon="md-add"
+          />
+        </View>
       </View>
     );
   }
@@ -58,10 +67,22 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: 120
   },
   emptyListText: {
     color: '#b3b3b3',
   },
+  emptyListTextDesc: {
+    fontSize: 12,
+    color: '#cccccc',
+  },
+  list: {
+    flex: 1,
+    backgroundColor: '#f2f2f2'
+  },
+  indicator: {
+    marginTop: 50
+  }
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators(

@@ -99,9 +99,7 @@ const styles = StyleSheet.create({
     width: 120,
     height: '85%',
     borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#d9d9d9',
-    marginRight: 10,
+    marginRight: 10
   },
   imagePlaceholder: {
     width: 120,
@@ -116,6 +114,8 @@ const styles = StyleSheet.create({
     color: '#999999',
     flex: 1,
     maxHeight: 20,
+    marginRight: 5,
+    width: 290
   },
   info: {
     flex: 1,
@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 1,
-    marginRight: 10,
+    marginRight: 30,
   },
 });
 

@@ -1,19 +1,41 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {ActivityIndicator, Dimensions, StyleSheet, View} from 'react-native';
+import {ActivityIndicator, Dimensions, StyleSheet, View, TouchableOpacity} from 'react-native';
 import {bindActionCreators} from "redux";
 import {fetchPetComments, fetchPetAdComments} from "../../store/pet/actions";
 import CommentsList from "../../components/comments/List";
 import CommentInput from "../../components/comments/CommentInput";
+import { Ionicons } from '@expo/vector-icons';
 
 class CommentsScreen extends Component {
+  static navigationOptions = ({ navigation }) => {
+    const { state } = navigation;
+    return {
+      headerRight: (
+        <TouchableOpacity
+          style={{marginRight: 20}}
+          onPress={state.params.fetchComments}
+        >
+          <Ionicons name={"ios-refresh"} color="white" size={20}/>
+        </TouchableOpacity>
+      )
+    };
+  };
+
   componentDidMount() {
+    this.props.navigation.setParams({
+      fetchComments: this.fetchComments
+    });
+    this.fetchComments();
+  }
+
+  fetchComments = () => {
     if (this.props.navigation.getParam('isPetAd')) {
       this.props.fetchPetAdComments(this.props.navigation.getParam('petId'));
     } else {
       this.props.fetchPetComments(this.props.navigation.getParam('petId'));
     }
-  }
+  };
 
   render() {
     return (
