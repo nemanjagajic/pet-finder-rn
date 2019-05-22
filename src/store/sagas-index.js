@@ -23,6 +23,8 @@ import {
 } from './pet/saga';
 import {POST_PET_AD_COMMENT, POST_PET_COMMENT} from "./comments/constants";
 import {postPetAdComment, postPetComment} from "./comments/saga";
+import {UPDATE_USER} from "./user/constants";
+import {updateUser} from "./user/saga";
 
 export default function* rootSaga() {
   yield all([
@@ -36,6 +38,7 @@ export default function* rootSaga() {
     takeLatest(FETCH_PET_COMMENTS, fetchPetComments),
     takeLatest(FETCH_PET_AD_COMMENTS, fetchPetAdComments),
     takeLatest(POST_PET_COMMENT, postPetComment),
-    takeLatest(POST_PET_AD_COMMENT, postPetAdComment)
+    takeLatest(POST_PET_AD_COMMENT, postPetAdComment),
+    takeLatest(UPDATE_USER, updateUser)
   ]);
 }

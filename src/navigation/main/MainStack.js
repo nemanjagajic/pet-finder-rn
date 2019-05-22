@@ -5,6 +5,10 @@ import FoundPetScreen from '../../screens/found/FoundPetScreen';
 import MainTabNavigation from './MainTabNavigation';
 import PetAdDetailsScreen from '../../screens/petAd/PetAdDetailsScreen';
 import CommentsScreen from "../../screens/comments/CommentsScreen";
+import { Ionicons } from '@expo/vector-icons';
+import React from "react";
+import ProfileScreen from "../../screens/profile/ProfileScreen";
+import {mainStackNavigate} from "../../services/Navigation";
 
 const MainStack = createStackNavigator(
   {
@@ -16,6 +20,13 @@ const MainStack = createStackNavigator(
           backgroundColor: '#009688',
         },
         headerTintColor: '#fff',
+        headerRight: (
+          <Ionicons 
+            name="md-person" color="#bfbfbf" size={25}
+            style={{ marginRight: 20, color: '#fff' }}
+            onPress={() => mainStackNavigate('Profile')}
+          />
+        )
       },
     },
     AddPet: {
@@ -67,6 +78,16 @@ const MainStack = createStackNavigator(
         },
         headerTintColor: '#fff',
       },
+    },
+    Profile: {
+      screen: ProfileScreen,
+      navigationOptions: {
+        title: 'Profile',
+        headerStyle: {
+          backgroundColor: '#009688',
+        },
+        headerTintColor: '#fff',
+      }
     }
   },
   {
