@@ -7,7 +7,7 @@ class ProfileScreen extends Component {
 
   constructor(props) {
     super(props);
-    const { loggedUser } = this.props;
+    const {loggedUser} = this.props;
     this.state = {
       username: loggedUser.username,
       fullName: loggedUser.fullName,
@@ -28,44 +28,46 @@ class ProfileScreen extends Component {
 
           </View>
         </View>
-        <View style={styles.borderLine} />
+        <View style={styles.borderLine}/>
         <TextInput
           style={styles.input}
           placeholder={'Username'}
           value={this.state.username}
-          onChangeText={text => this.setState({ username: text })}
+          onChangeText={text => this.setState({username: text})}
         />
         <TextInput
           style={styles.input}
           placeholder={'Full Name'}
           value={this.state.fullName}
-          onChangeText={text => this.setState({ fullName: text })}
+          onChangeText={text => this.setState({fullName: text})}
         />
         <TextInput
           style={styles.input}
           placeholder={'Phone Number'}
           value={this.state.phoneNumber}
-          onChangeText={text => this.setState({ phoneNumber: text })}
+          onChangeText={text => this.setState({phoneNumber: text})}
         />
         <TextInput
           style={styles.input}
           placeholder={'Password'}
           value={this.state.password}
-          onChangeText={text => this.setState({ password: text })}
+          onChangeText={text => this.setState({password: text})}
         />
-        <TouchableOpacity
-          style={styles.saveButton}
-          title={'Save'}
-          onPress={this.updateUser}
-        >
-          <Text style={styles.buttonText}>Save changes</Text>
-        </TouchableOpacity>
         {
-          this.props.isUpdating && (
+          this.props.isUpdating ? (
             <ActivityIndicator
+              style={{marginTop: 40, marginBottom: 45}}
               size="large"
               color="#009688"
             />
+          ) : (
+            <TouchableOpacity
+              style={styles.saveButton}
+              title={'Save'}
+              onPress={this.updateUser}
+            >
+              <Text style={styles.buttonText}>Save changes</Text>
+            </TouchableOpacity>
           )
         }
       </ScrollView>
@@ -75,7 +77,6 @@ class ProfileScreen extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     alignItems: 'center',
     backgroundColor: '#fff',
   },
@@ -117,7 +118,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 40,
-    marginBottom: 30,
+    marginBottom: 40,
     backgroundColor: '#26A69A',
   },
   buttonText: {
