@@ -46,7 +46,7 @@ const PetAdItem = props => (
           props.image
             ? (
               <Image
-                source={{ uri: `${BASE}/storage/images/${props.image}` }}
+                source={{ uri: `${BASE}/storage/images/pets/${props.image}` }}
                 style={styles.image}
               />
             )

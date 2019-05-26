@@ -1,7 +1,18 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, ScrollView, TextInput, TouchableOpacity, ActivityIndicator, Text} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  ScrollView,
+  TextInput,
+  TouchableOpacity,
+  ActivityIndicator,
+  Text,
+  Image,
+} from 'react-native';
+import {ImagePicker, Permissions} from 'expo';
 import {connect} from 'react-redux';
 import {updateUser} from "../../store/user/actions";
+import {BASE} from "../../services/api/constants";
 
 class ProfileScreen extends Component {
 
@@ -9,24 +20,70 @@ class ProfileScreen extends Component {
     super(props);
     const {loggedUser} = this.props;
     this.state = {
+      id: loggedUser.id,
       username: loggedUser.username,
       fullName: loggedUser.fullName,
       phoneNumber: loggedUser.phoneNumber,
-      password: loggedUser.password
+      password: loggedUser.password,
+      image: loggedUser.image,
+      uploadedNewImage: false
     };
   }
 
   updateUser = () => {
-    this.props.updateUser(this.state, this.props.loggedUser.id);
+    const userData = {
+      username: this.state.username,
+      fullName: this.state.fullName,
+      phoneNumber: this.state.phoneNumber,
+      password: this.state.password,
+      image: this.state.uploadedNewImage ? this.state.image : null
+    };
+
+    this.props.updateUser(userData, this.props.loggedUser.id);
+    this.setState({uploadedNewImage: false});
+  };
+
+  getImageSource = () => {
+    const {uploadedNewImage, image} = this.state;
+    return uploadedNewImage ? image.uri : (
+      this.state.image
+        ? `${BASE}/storage/images/users/${this.state.id}/${this.state.image}`
+        : ''
+    );
+  };
+
+  uploadImage = async () => {
+    await Permissions.askAsync(Permissions.CAMERA);
+    await Permissions.askAsync(Permissions.CAMERA_ROLL);
+
+    let result = await ImagePicker.launchImageLibraryAsync({
+      allowsEditing: true,
+      aspect: [3, 2]
+    });
+
+    if (!result.cancelled) {
+      this.setState({
+        image: result,
+        uploadedNewImage: true
+      });
+    }
   };
 
   render() {
     return (
       <ScrollView contentContainerStyle={styles.container}>
         <View style={styles.header}>
-          <View style={styles.image}>
-
-          </View>
+          <Image
+            style={styles.image}
+            source={{uri: this.getImageSource()}}
+          />
+          <TouchableOpacity
+            style={styles.changeImageBanner}
+            title={'Add image'}
+            onPress={this.uploadImage}
+          >
+            <Text style={styles.changeImageText}>Change profile image </Text>
+          </TouchableOpacity>
         </View>
         <View style={styles.borderLine}/>
         <TextInput
@@ -97,7 +154,9 @@ const styles = StyleSheet.create({
     width: 120,
     height: 120,
     backgroundColor: '#f2f2f2',
-    borderRadius: 60
+    borderRadius: 60,
+    borderColor: '#f2f2f2',
+    borderWidth: 1
   },
   input: {
     width: '80%',
@@ -125,6 +184,16 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: 'white',
     marginLeft: 5,
+  },
+  changeImageBanner: {
+    backgroundColor: '#26A69A',
+    width: '100%',
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  changeImageText: {
+    color: '#fff',
+    fontSize: 16
   }
 });
 
