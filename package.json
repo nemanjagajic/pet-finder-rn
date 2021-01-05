@@ -7,7 +7,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-eslint": "^8.2.3",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-node": "^8.0.1",
